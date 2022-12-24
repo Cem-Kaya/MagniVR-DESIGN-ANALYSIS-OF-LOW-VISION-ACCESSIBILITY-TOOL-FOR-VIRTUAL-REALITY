@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 364578164}
   - component: {fileID: 364578163}
   - component: {fileID: 364578162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 712900740}
   - component: {fileID: 712900739}
   - component: {fileID: 712900738}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2090,7 +2090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639189829, guid: ad76eaea994cc994ba2eadeb613e195f, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 2147483647
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 337365309437791729, guid: ad76eaea994cc994ba2eadeb613e195f,
         type: 3}
