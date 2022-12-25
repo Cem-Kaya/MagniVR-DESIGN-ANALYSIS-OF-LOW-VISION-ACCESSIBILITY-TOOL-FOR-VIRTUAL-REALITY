@@ -26,9 +26,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544266723}
   m_LocalRotation: {x: -0.32324922, y: -0.32324922, z: -0.6288958, w: -0.6288958}
-  m_LocalPosition: {x: 0.1175, y: 0.05, z: 0.0189}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0.0016, y: 0, z: -0.047}
+  m_LocalScale: {x: 0.2, y: 0.1125, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 337365310223289641}
   m_RootOrder: 2
@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639189826}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.112, y: 0, z: 0}
+  m_LocalPosition: {x: 0.038, y: 0.016, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137,8 +137,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 1.6
+    height: 0.9
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 30
@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 337365309437791729}
   m_Layer: 0
-  m_Name: Attach
+  m_Name: Attach_magnifier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337365309437791734}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.1824, y: 0.0329, z: 0.0676}
+  m_LocalPosition: {x: 0.0619, y: 0.0181, z: -0.0131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -403,8 +403,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.001, y: 0.001, z: 0.001}
-  m_Center: {x: 0.15036789, y: -8.3680947e-16, z: 0.06899822}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4516191714663785409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -425,17 +425,17 @@ PrefabInstance:
     - target: {fileID: 5514928057748798297, guid: 970837154bf1141478876d77f7cdb1c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.112
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5514928057748798297, guid: 970837154bf1141478876d77f7cdb1c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0143
       objectReference: {fileID: 0}
     - target: {fileID: 5514928057748798297, guid: 970837154bf1141478876d77f7cdb1c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -0.077
       objectReference: {fileID: 0}
     - target: {fileID: 5514928057748798297, guid: 970837154bf1141478876d77f7cdb1c9,
         type: 3}
