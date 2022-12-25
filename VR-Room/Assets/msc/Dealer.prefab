@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1544266723}
   m_LocalRotation: {x: -0.32324922, y: -0.32324922, z: -0.6288958, w: -0.6288958}
   m_LocalPosition: {x: 0.1175, y: 0.05, z: 0.0189}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 337365310223289641}
@@ -147,7 +147,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 51
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: d8f0ec480a2def24992cb4913c219ea7, type: 2}
   m_TargetDisplay: 0
@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337365309437791734}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.142, y: 0.055, z: -0.073}
+  m_LocalPosition: {x: 0.1123, y: 0.0301, z: -0.0686}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 337365310223289646}
   - component: {fileID: 337365310223289647}
   - component: {fileID: 1050047189}
+  - component: {fileID: 1248394374973133583}
   m_Layer: 0
   m_Name: Dealer
   m_TagString: Untagged
@@ -251,7 +252,7 @@ Transform:
   m_GameObject: {fileID: 337365310223289644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8224779868369016984}
@@ -393,6 +394,19 @@ MonoBehaviour:
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
 --- !u!65 &1050047189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337365310223289644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1248394374973133583
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
