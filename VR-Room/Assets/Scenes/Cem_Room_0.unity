@@ -856,7 +856,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
@@ -1396,7 +1396,7 @@ MonoBehaviour:
       m_Calls: []
   m_TeleportationProvider: {fileID: 1313711685}
   m_MatchOrientation: 0
-  m_TeleportTrigger: 0
+  m_TeleportTrigger: 1
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
@@ -1833,7 +1833,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
@@ -2715,7 +2715,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223777391}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
@@ -2788,7 +2788,7 @@ MonoBehaviour:
       m_Calls: []
   m_TeleportationProvider: {fileID: 1313711685}
   m_MatchOrientation: 0
-  m_TeleportTrigger: 0
+  m_TeleportTrigger: 1
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
@@ -3352,7 +3352,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -3613,6 +3613,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1050047189, guid: ad76eaea994cc994ba2eadeb613e195f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050047189, guid: ad76eaea994cc994ba2eadeb613e195f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050047189, guid: ad76eaea994cc994ba2eadeb613e195f, type: 3}
+      propertyPath: m_Size.z
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639189826, guid: ad76eaea994cc994ba2eadeb613e195f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 337365310223289641, guid: ad76eaea994cc994ba2eadeb613e195f,
         type: 3}
       propertyPath: m_RootOrder
@@ -3673,10 +3689,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dealer
       objectReference: {fileID: 0}
+    - target: {fileID: 337365310223289644, guid: ad76eaea994cc994ba2eadeb613e195f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 337365310223289647, guid: ad76eaea994cc994ba2eadeb613e195f,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 139200558}
-    m_RemovedComponents: []
+    - target: {fileID: 1248394374973133583, guid: ad76eaea994cc994ba2eadeb613e195f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248394374973133583, guid: ad76eaea994cc994ba2eadeb613e195f,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248394374973133583, guid: ad76eaea994cc994ba2eadeb613e195f,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1248394374973133583, guid: ad76eaea994cc994ba2eadeb613e195f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad76eaea994cc994ba2eadeb613e195f, type: 3}
