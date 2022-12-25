@@ -305,6 +305,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &227396780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8894722910586613609, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+    type: 3}
+  m_PrefabInstance: {fileID: 1289338229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e456ce2f6d5344bbc7828b6441a942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &355320881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1321,6 +1333,7 @@ GameObject:
   - component: {fileID: 712900739}
   - component: {fileID: 712900738}
   - component: {fileID: 712900742}
+  - component: {fileID: 712900743}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -1666,7 +1679,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 5581692558364277938, guid: 233d735817dff43da9b78129b58d66fb,
+  m_ModelPrefab: {fileID: 5581692558364277938, guid: 18f8dc879d76a0a4ca996a29d5962638,
     type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
@@ -1849,14 +1862,105 @@ MonoBehaviour:
     m_Id: a6336bea-add9-41c9-a797-60aa6c0fc886
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 032b095c-3ec2-41fd-9535-aa0617131591
+      m_Path: <XRController>/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
     m_Flags: 0
   OnPress:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 227396780}
+        m_TargetAssemblyTypeName: make_magnifier_hide, Assembly-CSharp
+        m_MethodName: button1_true
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnRelease:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 227396780}
+        m_TargetAssemblyTypeName: make_magnifier_hide, Assembly-CSharp
+        m_MethodName: button1_false
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &712900743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712900736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8d337e8bc7ac4498e0df29e7b8bd5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_Name: Action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b05c3348-1e22-4c26-96ca-82efb5561779
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 74668aaf-b354-4ad3-abe3-03a1e3b536f6
+      m_Path: <XRController>/secondaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    m_Flags: 0
+  OnPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227396780}
+        m_TargetAssemblyTypeName: make_magnifier_hide, Assembly-CSharp
+        m_MethodName: button2_true
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227396780}
+        m_TargetAssemblyTypeName: make_magnifier_hide, Assembly-CSharp
+        m_MethodName: button2_false
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &846849628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2584,7 +2688,7 @@ PrefabInstance:
     - target: {fileID: 337365310223289641, guid: 9baaffc83b544bc4ab1951ca22860df9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 337365310223289641, guid: 9baaffc83b544bc4ab1951ca22860df9,
         type: 3}
@@ -2641,6 +2745,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dealer
       objectReference: {fileID: 0}
+    - target: {fileID: 337365310223289644, guid: 9baaffc83b544bc4ab1951ca22860df9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 337365310223289647, guid: 9baaffc83b544bc4ab1951ca22860df9,
         type: 3}
       propertyPath: m_InteractionManager
@@ -2648,6 +2757,75 @@ PrefabInstance:
       objectReference: {fileID: 139200558}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9baaffc83b544bc4ab1951ca22860df9, type: 3}
+--- !u!1001 &1289338229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.115046844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.059186418
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3081501
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462594182728314134, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989336173082582060, guid: 766c5274a8e3eb64aaeb38f9ed028354,
+        type: 3}
+      propertyPath: m_Name
+      value: Mag_control
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 766c5274a8e3eb64aaeb38f9ed028354, type: 3}
 --- !u!1 &1313711679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,7 +2877,7 @@ Transform:
   m_Children:
   - {fileID: 650672842}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -0.305, y: -0.693, z: -0.043}
 --- !u!114 &1313711682
 MonoBehaviour:
@@ -2838,7 +3016,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -3382,7 +3560,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8067222135228803110
 PrefabInstance:

@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2012454744358855800}
   m_Layer: 0
-  m_Name: VR_Hand_Colorful_Left
+  m_Name: VR_Hand_Colorful_Left_My
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7444502278558553091
 Transform:
   m_ObjectHideFlags: 0

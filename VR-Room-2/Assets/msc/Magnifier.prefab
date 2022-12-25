@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 337365310223289647}
   - component: {fileID: 1050047189}
   m_Layer: 0
-  m_Name: Dealer
+  m_Name: Magnifier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
