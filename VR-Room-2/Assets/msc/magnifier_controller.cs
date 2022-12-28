@@ -11,8 +11,8 @@ public class magnifier_controller : MonoBehaviour
     {
         //find mag_control and give this object to Magnifier on that object
         GameObject mag_control = GameObject.Find("Mag_control");
-        //g
-        mag_control.GetComponent<make_magnifier_hide>().magnifier = transform.Find("Magnifier").gameObject;
+        //
+        mag_control.GetComponent<make_magnifier_hide>().right_hand_magnifier = transform.Find("Magnifier").gameObject;
 
     }
 
