@@ -6,8 +6,8 @@ public class make_magnifier_hide : MonoBehaviour
 {
 
 	public GameObject right_hand_magnifier;
-    public GameObject left_hand_magnifier;
-    public GameObject seeing_vr_magnifier;
+	public GameObject left_hand_magnifier;
+	public GameObject seeing_vr_magnifier;
 	public bool button1 = false;
 	public bool button2 = false;
 	public bool button3 = false;
@@ -18,11 +18,11 @@ public class make_magnifier_hide : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-        //find gameobject named VR_Hand_Colorful_Left_My and give its Quad child to left_hand_magnifier
-        left_hand_magnifier = GameObject.Find("VR_Hand_Colorful_Left_My").transform.Find("Quad").gameObject;
-    }
+		//find gameobject named VR_Hand_Colorful_Left_My and give its Quad child to left_hand_magnifier
+		//left_hand_magnifier = GameObject.Find("VR_Hand_Colorful_Left_My").transform.Find("Quad").gameObject;
+	}
 
-    public void button1_true()
+	public void button1_true()
 	{
 		button1 = true;
 
@@ -61,27 +61,27 @@ public class make_magnifier_hide : MonoBehaviour
 	}
 	void turn_off_mag_children(GameObject mag)
 	{
-        foreach (Transform child in mag.transform)
-        {
-            if (child.name != "zoom_camera")
-            {
-                child.gameObject.SetActive(false);
-            }
-        }
-    }
+		foreach (Transform child in mag.transform)
+		{
+			if (child.name != "zoom_camera")
+			{
+				child.gameObject.SetActive(false);
+			}
+		}
+	}
 
-    void turn_on_mag_children(GameObject mag)
-    {
-        foreach (Transform child in mag.transform)
-        {
-            if (child.name != "zoom_camera")
-            {
-                child.gameObject.SetActive(true);
-            }
-        }
-    }
+	void turn_on_mag_children(GameObject mag)
+	{
+		foreach (Transform child in mag.transform)
+		{
+			if (child.name != "zoom_camera")
+			{
+				child.gameObject.SetActive(true);
+			}
+		}
+	}
 
-    bool pressable = true;
+	bool pressable = true;
 
 	//write coroutine function IENUMERATOR
 	IEnumerator wait()
@@ -104,17 +104,17 @@ public class make_magnifier_hide : MonoBehaviour
 					//right_hand_magnifier.SetActive(false);
 					//disable all children of right hand magnifier except for zoom_camera
 					turn_off_mag_children(right_hand_magnifier);
-                    seeing_vr_magnifier.SetActive(false);
+					seeing_vr_magnifier.SetActive(false);
 					left_hand_magnifier.SetActive(false);
 					mag_state = false;
 				}
 				else
 				{
-                    //right_hand_magnifier.SetActive(true);
-                    turn_on_mag_children(right_hand_magnifier);
-                    seeing_vr_magnifier.SetActive(false);
-                    left_hand_magnifier.SetActive(false);
-                    mag_state = true;
+					//right_hand_magnifier.SetActive(true);
+					turn_on_mag_children(right_hand_magnifier);
+					seeing_vr_magnifier.SetActive(false);
+					left_hand_magnifier.SetActive(false);
+					mag_state = true;
 
 				}
 			}
@@ -123,20 +123,20 @@ public class make_magnifier_hide : MonoBehaviour
 				if (mag_state == true)
 				{
 					seeing_vr_magnifier.SetActive(false);
-                    left_hand_magnifier.SetActive(false);
+					left_hand_magnifier.SetActive(false);
 
-                    turn_off_mag_children(right_hand_magnifier);
-                    //right_hand_magnifier.SetActive(false);
-                    mag_state = false;
+					turn_off_mag_children(right_hand_magnifier);
+					//right_hand_magnifier.SetActive(false);
+					mag_state = false;
 				}
 				else
 				{
 					seeing_vr_magnifier.SetActive(true);
-                    left_hand_magnifier.SetActive(false);
+					left_hand_magnifier.SetActive(false);
 
-                    //right_hand_magnifier.SetActive(false);
-                    turn_off_mag_children(right_hand_magnifier);
-                    mag_state = true;
+					//right_hand_magnifier.SetActive(false);
+					turn_off_mag_children(right_hand_magnifier);
+					mag_state = true;
 
 				}
 
@@ -147,39 +147,39 @@ public class make_magnifier_hide : MonoBehaviour
 			//left hand magnifier
 			else if(state == 2)
 			{
-                if (mag_state == true)
-                {
-                    seeing_vr_magnifier.SetActive(false);
-                    left_hand_magnifier.SetActive(false);
+				if (mag_state == true)
+				{
+					seeing_vr_magnifier.SetActive(false);
+					left_hand_magnifier.SetActive(false);
 
-                    turn_off_mag_children(right_hand_magnifier);
-                    //right_hand_magnifier.SetActive(false);
-                    mag_state = false;
-                }
-                else
-                {
-                    seeing_vr_magnifier.SetActive(false);
-                    left_hand_magnifier.SetActive(true);
+					turn_off_mag_children(right_hand_magnifier);
+					//right_hand_magnifier.SetActive(false);
+					mag_state = false;
+				}
+				else
+				{
+					seeing_vr_magnifier.SetActive(false);
+					left_hand_magnifier.SetActive(true);
 					
-                    //right_hand_magnifier.SetActive(false);
-                    turn_off_mag_children(right_hand_magnifier);
-                    mag_state = true;
+					//right_hand_magnifier.SetActive(false);
+					turn_off_mag_children(right_hand_magnifier);
+					mag_state = true;
 
-                }
-            }
-            else if (state == 3)
-            {
-                seeing_vr_magnifier.SetActive(false);
-                turn_off_mag_children(right_hand_magnifier);
-                left_hand_magnifier.SetActive(false);
+				}
+			}
+			else if (state == 3)
+			{
+				seeing_vr_magnifier.SetActive(false);
+				turn_off_mag_children(right_hand_magnifier);
+				left_hand_magnifier.SetActive(false);
 
-                mag_state = false;
-            }
-
-
+				mag_state = false;
+			}
 
 
-        }
+
+
+		}
 	}
 
 	public void state_change(int sta)
