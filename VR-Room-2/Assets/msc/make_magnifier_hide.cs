@@ -78,12 +78,14 @@ public class make_magnifier_hide : MonoBehaviour
 				if (mag_state == true)
 				{
 					magnifier.SetActive(false);
+					seeing_vr_magnifier.SetActive(false);
 					mag_state = false;
 				}
 				else
 				{
 					magnifier.SetActive(true);
-					mag_state = true;
+                    seeing_vr_magnifier.SetActive(false);
+                    mag_state = true;
 
 				}
 			}
@@ -92,35 +94,36 @@ public class make_magnifier_hide : MonoBehaviour
 				if (mag_state == true)
 				{
 					seeing_vr_magnifier.SetActive(false);
-					mag_state = false;
+                    magnifier.SetActive(false);
+                    mag_state = false;
 				}
 				else
 				{
 					seeing_vr_magnifier.SetActive(true);
-					mag_state = true;
+                    magnifier.SetActive(false);
+                    mag_state = true;
 
 				}
 
 
-
-
-
-
-
 				//start courotine
 
-
 			}
+            else if (state == 3)
+            {
+                seeing_vr_magnifier.SetActive(false);
+                magnifier.SetActive(false);
+                mag_state = false;
+            }
 
 
 
 
-
-		}
+        }
 	}
 
-    public void state_change(int sta)
-    {
-        state = sta;
-    }
+	public void state_change(int sta)
+	{
+		state = sta;
+	}
 }
