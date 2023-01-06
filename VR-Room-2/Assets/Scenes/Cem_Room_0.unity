@@ -3953,6 +3953,7 @@ GameObject:
   - component: {fileID: 712900738}
   - component: {fileID: 712900742}
   - component: {fileID: 712900743}
+  - component: {fileID: 712900744}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -4580,6 +4581,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &712900744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712900736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e42b0a565bbce52428a417b892af2954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_Name: Action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5c7edd4f-e588-4034-8df0-885eebd466fc
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  OnXValueChange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnYValueChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &722293975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2921828748810890979, guid: 9bcb17598f395da42ba1005440ae090d,
