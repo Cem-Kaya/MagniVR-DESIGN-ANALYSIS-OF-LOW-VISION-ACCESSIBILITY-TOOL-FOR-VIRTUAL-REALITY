@@ -43,7 +43,7 @@ public class OnJoystickMove : MonoBehaviour
 
     private void OnValueChange(InputAction.CallbackContext context)
     {
-        Vector2 value = context.ReadValue<Vector2>();
+        Vector2 value = context.ReadValue<Vector2>();        
         OnXValueChange.Invoke(value.x);
         OnYValueChange.Invoke(value.y);
     }
