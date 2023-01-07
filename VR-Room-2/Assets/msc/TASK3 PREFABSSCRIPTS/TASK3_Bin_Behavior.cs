@@ -6,8 +6,9 @@ public class TASK3_Bin_Behavior : MonoBehaviour
 {
     //object_1 is baseball
     public (bool, string) object_1 = (false, "Baseball_Ball");
-    public (bool, string) object_2 = (false, "Baseball_Ball (1)");
-    
+    public (bool, string) object_2 = (false, "Book_B_Red");
+    public (bool, string) object_3 = (false, "Container_Bottle_Blue");
+
     public float total_time = 0;
     public bool task3_ended = false;
     public List<(bool, string)> objects_to_be_found = new List<(bool,string)>();
@@ -18,6 +19,7 @@ public class TASK3_Bin_Behavior : MonoBehaviour
         //add object_1 to objects_to_be_found
         objects_to_be_found.Add(object_1);
         objects_to_be_found.Add(object_2);
+        objects_to_be_found.Add(object_3);
     }
 
     // Update is called once per frame
@@ -28,7 +30,6 @@ public class TASK3_Bin_Behavior : MonoBehaviour
         {
             total_time += Time.deltaTime;
         }
-        total_time += Time.deltaTime;
         //if all objects are found, end the task
         int found_obj_num = 0;
         foreach ((bool, string) obj in objects_to_be_found)
