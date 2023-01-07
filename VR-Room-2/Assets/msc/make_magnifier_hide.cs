@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class make_magnifier_hide : MonoBehaviour
 {
@@ -14,10 +15,14 @@ public class make_magnifier_hide : MonoBehaviour
 	bool mag_state = true;
 	//0 is our, 1 is SeeingVR, 2 is nothing
 	public int state = 0;
+	public InputDevice left_hand_controller;
+	public InputDevice right_hand_controller;
+	public int test_int;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+
 		//find gameobject named VR_Hand_Colorful_Left_My and give its Quad child to left_hand_magnifier
 		//left_hand_magnifier = GameObject.Find("VR_Hand_Colorful_Left_My").transform.Find("Quad").gameObject;
 	}
@@ -90,8 +95,82 @@ public class make_magnifier_hide : MonoBehaviour
 		yield return new WaitForSeconds(1.5f);
 		pressable = true;
 	}
+	IEnumerator wait2()
+	{
+
+		yield return new WaitForSeconds(0.1f);
+		pressable = true;
+	}
+
+
 	private void FixedUpdate()
 	{
+		var inputDevices = new List<InputDevice>();
+		InputDevices.GetDevices(inputDevices);
+
+		foreach (var device in inputDevices)
+		{
+			//Debug.Log(string.Format("Device found with name '{0}'", device.name));
+			//only debug the right hand and left hand controller
+			//characteristics should be held in hand
+			//Debug.Log(string.Format("Device found with name '{0}'", device.characteristics, "role str:", device.role.ToString()));
+			//Debug.Log(device.role.ToString());
+			//debug primary2daxis vector values
+			Vector2 primary2DAxis;
+			// get left hend 
+			if (device.role.ToString() == "LeftHanded")
+			{
+				left_hand_controller = device;
+				//Debug.Log("left hand controller found");
+			}
+			if (device.role.ToString() == "RightHanded")
+			{
+				right_hand_controller = device;
+				//Debug.Log("right hand controller found");
+			}
+
+
+		}
+		//device.role.ToString()
+		/////////////////////////////////////////////
+		///
+
+		Vector2 tmp_r;
+		Vector2 tmp_l;
+		if (left_hand_controller.TryGetFeatureValue(CommonUsages.primary2DAxis, out tmp_l))
+		{
+			//Debug.Log(string.Format("Primary 2D Axis for left: {0}", tmp_l));
+		}
+		if (right_hand_controller.TryGetFeatureValue(CommonUsages.primary2DAxis, out tmp_r))
+		{
+			//Debug.Log(string.Format("Primary 2D Axis for right: {0}", tmp_r));
+		}
+
+		if (button1 == false && button2 == true && pressable && (Mathf.Abs(tmp_l.y) >= 0.8))
+		{
+			pressable = false;
+			StartCoroutine(wait2());
+			//min = 2
+			if (tmp_l.y >= 0.8)
+			{	
+				if(right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2) 
+				{
+					right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+				}
+				//Debug.Log("Changed FOW");
+			}
+			else if (tmp_l.y <= -0.8)
+			{	
+				if(right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
+				{
+					right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+				}
+				
+				Debug.Log("Changed FOW");
+			}
+
+		}
+
 		//debounce  	   
 		if (button1 == true && button2 == true && pressable)
 		{
@@ -145,7 +224,7 @@ public class make_magnifier_hide : MonoBehaviour
 
 			}
 			//left hand magnifier
-			else if(state == 2)
+			else if (state == 2)
 			{
 				if (mag_state == true)
 				{
@@ -160,7 +239,7 @@ public class make_magnifier_hide : MonoBehaviour
 				{
 					seeing_vr_magnifier.SetActive(false);
 					left_hand_magnifier.SetActive(true);
-					
+
 					//right_hand_magnifier.SetActive(false);
 					turn_off_mag_children(right_hand_magnifier);
 					mag_state = true;
