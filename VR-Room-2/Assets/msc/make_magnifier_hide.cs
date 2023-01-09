@@ -166,7 +166,7 @@ public class make_magnifier_hide : MonoBehaviour
 					right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
 				}
 				
-				Debug.Log("Changed FOW");
+				//Debug.Log("Changed FOW");
 			}
 
 		}
