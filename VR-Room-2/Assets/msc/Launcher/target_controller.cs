@@ -8,7 +8,7 @@ public class target_controller : MonoBehaviour
 	bool been_hit = false;
 	void Start()
 	{
-		been_hit = false
+		been_hit = false;
 	}
 	
 	// function to write to the text file
