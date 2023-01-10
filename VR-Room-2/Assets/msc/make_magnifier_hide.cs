@@ -17,7 +17,6 @@ public class make_magnifier_hide : MonoBehaviour
 	public int state = 0;
 	public InputDevice left_hand_controller;
 	public InputDevice right_hand_controller;
-	public int test_int;
 
 	// Start is called before the first frame update
 	void Start()
@@ -155,7 +154,9 @@ public class make_magnifier_hide : MonoBehaviour
 			{	
 				if(right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2) 
 				{
+					seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
 					right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+					
 				}
 				//Debug.Log("Changed FOW");
 			}
@@ -163,6 +164,9 @@ public class make_magnifier_hide : MonoBehaviour
 			{	
 				if(right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
 				{
+					seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+					// samthing is wierd here
+					Debug.Log("zooming in seeing vr"+ seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView);
 					right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
 				}
 				
