@@ -13,7 +13,7 @@ public class make_magnifier_hide : MonoBehaviour
 	public bool button2 = false;
 	public bool button3 = false;
 	bool mag_state = true;
-	//0 is our, 1 is SeeingVR, 2 is nothing
+	//0 is our, 1 is SeeingVR, 2 lefthand 3 nothing
 	public int state = 0;
 	public InputDevice left_hand_controller;
 	public InputDevice right_hand_controller;
@@ -145,29 +145,56 @@ public class make_magnifier_hide : MonoBehaviour
 			//Debug.Log(string.Format("Primary 2D Axis for right: {0}", tmp_r));
 		}
 
-		if (button1 == false && button2 == true && pressable && (Mathf.Abs(tmp_l.y) >= 0.8))
+		if (button1 == false && button2 == true && pressable && (Mathf.Abs(tmp_l.y) >= 0.8)  )
 		{
 			pressable = false;
 			StartCoroutine(wait2());
 			//min = 2
 			if (tmp_l.y >= 0.8)
-			{	
-				if(right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2) 
+			{
+				if (state == 0 || state==2)
 				{
-					seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
-					right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
-					
+					if (right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2)
+					{
+						//Debug.Log("state is "+state + "also fow is " + right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView);
+						//seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+						right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+
+					}
+				}
+				else if (state == 1)
+				{
+					if (seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2)
+					{
+						seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+						//right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+
+					}
 				}
 				//Debug.Log("Changed FOW");
 			}
 			else if (tmp_l.y <= -0.8)
-			{	
-				if(right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
+			{
+				if (state == 0 || state == 2)
 				{
-					seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
-					// samthing is wierd here
-					Debug.Log("zooming in seeing vr"+ seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView);
-					right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+					if (right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
+					{
+						//seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+						// samthing is wierd here
+						//Debug.Log("zooming in seeing vr" + seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView);
+						right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+					}
+				}
+
+				else if (state == 1)
+				{
+					if (seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
+					{
+						seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+						// samthing is wierd here
+						//Debug.Log("zooming in seeing vr" + seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView);
+						//right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+					}
 				}
 				
 				//Debug.Log("Changed FOW");
@@ -230,6 +257,7 @@ public class make_magnifier_hide : MonoBehaviour
 			//left hand magnifier
 			else if (state == 2)
 			{
+
 				if (mag_state == true)
 				{
 					seeing_vr_magnifier.SetActive(false);
@@ -243,8 +271,7 @@ public class make_magnifier_hide : MonoBehaviour
 				{
 					seeing_vr_magnifier.SetActive(false);
 					left_hand_magnifier.SetActive(true);
-
-					//right_hand_magnifier.SetActive(false);
+					//right_hand_magnifier.SetActive(true);
 					turn_off_mag_children(right_hand_magnifier);
 					mag_state = true;
 

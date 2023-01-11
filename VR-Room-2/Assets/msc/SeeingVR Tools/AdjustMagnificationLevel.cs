@@ -15,15 +15,15 @@ using UnityEngine;
 
 public class AdjustMagnificationLevel : MonoBehaviour {
 
-    public float magnificationLevel = 0;
-    public Camera c;
-    private float FOV = 60;
-    void Start () {
+	public float magnificationLevel = 0;
+	public Camera c;
+	private float FOV = 60;
+	void Start () {
 
 	}
 
 	void Update () {
 		float angle = Mathf.Atan(Mathf.Tan((FOV/2.0f) * Mathf.PI/180)/magnificationLevel) * 180 * 2/Mathf.PI;
 		c.fieldOfView = angle;
-    }
+	}
 }
