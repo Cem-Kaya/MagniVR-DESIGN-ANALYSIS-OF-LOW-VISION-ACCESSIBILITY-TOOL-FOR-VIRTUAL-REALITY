@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class target_controller : MonoBehaviour
+public class target_controller1 : MonoBehaviour
 {
 	// Start is called before the first frame update
 	bool been_hit = false;
