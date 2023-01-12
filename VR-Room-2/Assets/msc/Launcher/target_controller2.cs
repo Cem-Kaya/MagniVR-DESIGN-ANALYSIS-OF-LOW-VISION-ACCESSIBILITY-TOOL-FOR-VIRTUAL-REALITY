@@ -20,7 +20,8 @@ public class target_controller2 : MonoBehaviour
 	// function to write to the text file
 	public void write_to_file(string text)
 	{
-		System.IO.File.AppendAllText("./text/tmp.txt", text);
+		string filePath = Application.persistentDataPath + "/vrdata.txt";
+		System.IO.File.AppendAllText(filePath, text);
 	}
 
 	// Update is called once per frame

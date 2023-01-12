@@ -12,9 +12,9 @@ public class target_controller1 : MonoBehaviour
 	{
 		try
 		{
-			if (!Directory.Exists("./text"))
+			//if (!Directory.Exists("./text"))
 			{
-				Directory.CreateDirectory("./text");
+				;//Directory.CreateDirectory("./text");
 			}
 
 		}
@@ -31,7 +31,7 @@ public class target_controller1 : MonoBehaviour
 	// function to write to the text file
 	public void write_to_file(string text)
 	{
-		System.IO.File.AppendAllText("./text/tmp.txt", text);
+		System.IO.File.AppendAllText("vr_mag_test.txt", text);
 	}
 
 	// Update is called once per frame

@@ -22,7 +22,7 @@ public class target_controller3 : MonoBehaviour
 	// function to write to the text file
 	public void write_to_file(string text)
 	{
-		System.IO.File.AppendAllText("./text/tmp.txt", text);
+		System.IO.File.AppendAllText("vr_mag_test.txt", text);
 	}
 
 	// Update is called once per frame
