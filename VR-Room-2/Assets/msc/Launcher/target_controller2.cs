@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class target_controller2 : MonoBehaviour
@@ -8,6 +9,10 @@ public class target_controller2 : MonoBehaviour
 	bool been_hit = false;
 	void Start()
 	{
+
+		System.Random tmp = new System.Random();
+		tmp.Next(0, 5);
+		rnd = tmp.Next(0, 5);
 		been_hit = false;
 	}
 	Vector3 dir = new Vector3(0, 1, 0);
@@ -23,18 +28,20 @@ public class target_controller2 : MonoBehaviour
 	{
 		
 	}
+	float rnd;
 
 	private void FixedUpdate()
 	{
-		if (transform.position.y > 3.795f)
+		if (transform.position.y > 11.095f)
 		{
 			dir = new Vector3(0, -1, 0);
 		}
-		else if (transform.position.y < 2.144)
+		else if (transform.position.y < 9.52)
 		{
 			dir = new Vector3(0, 1, 0);
 		}
-		transform.position += 0.005f * dir;
+		transform.position += 0.01f * dir * rnd ;
+		//Debug.Log(transform.position.y);
 
 	}
 	// on collusion 
@@ -46,7 +53,7 @@ public class target_controller2 : MonoBehaviour
 			been_hit = true;
 			// get time 
 			string time = System.DateTime.Now.ToString("HH:mm:ss.fff");
-			write_to_file("hit on " + time + "\n");
+			write_to_file("hit2 on " + time + "\n");
 			
 
 			Destroy(gameObject);

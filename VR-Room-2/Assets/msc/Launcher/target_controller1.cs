@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class target_controller1 : MonoBehaviour
@@ -8,6 +10,21 @@ public class target_controller1 : MonoBehaviour
 	bool been_hit = false;
 	void Start()
 	{
+		try
+		{
+			if (!Directory.Exists("./text"))
+			{
+				Directory.CreateDirectory("./text");
+			}
+
+		}
+		catch (IOException ex)
+		{
+			Console.WriteLine(ex.Message);
+	    }
+
+
+
 		been_hit = false;
 	}
 	
@@ -31,7 +48,7 @@ public class target_controller1 : MonoBehaviour
 			been_hit = true;
 			// get time 
 			string time = System.DateTime.Now.ToString("HH:mm:ss.fff");
-			write_to_file("hit on " + time + "\n");
+			write_to_file("hit1 on " + time + "\n");
 			
 
 			Destroy(gameObject);
