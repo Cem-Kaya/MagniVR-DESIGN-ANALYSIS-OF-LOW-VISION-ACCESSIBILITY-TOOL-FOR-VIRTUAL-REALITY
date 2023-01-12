@@ -18,6 +18,8 @@ public class Task22_paragraph : MonoBehaviour
     public void start_game()
     {
         task_started = true;
+        task_ended = false;
+        timer = 0.0f;
     }
     void Start()
     {
@@ -39,5 +41,6 @@ public class Task22_paragraph : MonoBehaviour
         name = "test2-2";
         //put name inside the string itself
         System.IO.File.AppendAllText("./text/" + name + ".txt", timer.ToString());
+        timer = 0.0f;
     }
 }

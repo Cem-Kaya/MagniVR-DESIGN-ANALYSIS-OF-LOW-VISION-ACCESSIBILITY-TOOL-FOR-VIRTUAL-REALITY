@@ -38,6 +38,8 @@ public class Task2_1_Score : MonoBehaviour
     public void start_game()
     {
         task_started = true;
+        task_ended = false;
+        timer = 0.0f;
     }
 
     public void write_to_file()
@@ -45,5 +47,6 @@ public class Task2_1_Score : MonoBehaviour
         name = "test2-1";
         //put name inside the string itself
         System.IO.File.AppendAllText("./text/" + name + ".txt", timer.ToString());
+        timer = 0.0f;
     }
 }

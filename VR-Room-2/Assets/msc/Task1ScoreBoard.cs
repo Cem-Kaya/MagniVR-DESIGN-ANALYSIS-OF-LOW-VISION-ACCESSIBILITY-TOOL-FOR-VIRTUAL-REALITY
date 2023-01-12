@@ -45,6 +45,8 @@ public class Task1ScoreBoard : MonoBehaviour
     public void start_game()
     {
         task_started = true;
+        task_ended = false;
+        timer = 0.0f;
     }
 
     public void write_to_file()
