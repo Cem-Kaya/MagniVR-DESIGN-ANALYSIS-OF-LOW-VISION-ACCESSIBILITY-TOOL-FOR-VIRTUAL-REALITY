@@ -9,6 +9,8 @@ public class TASK3_Bin_Behavior : MonoBehaviour
     public (bool, string) object_2 = (false, "Book_B_Red");
     public (bool, string) object_3 = (false, "Container_Bottle_Blue");
 
+    public GameObject game_finished_indication;
+
 
     public float total_time = 0;
     public bool task3_ended = false;
@@ -44,6 +46,8 @@ public class TASK3_Bin_Behavior : MonoBehaviour
         }
         if (!task3_ended && found_obj_num == objects_to_be_found.Count)
         {
+            //make task ended indication active
+            game_finished_indication.SetActive(true);
             task3_ended = true;
             write_to_file();
         }
