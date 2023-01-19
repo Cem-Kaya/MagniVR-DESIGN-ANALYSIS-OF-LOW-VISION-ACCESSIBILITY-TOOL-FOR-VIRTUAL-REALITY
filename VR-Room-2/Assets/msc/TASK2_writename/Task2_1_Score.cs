@@ -45,8 +45,12 @@ public class Task2_1_Score : MonoBehaviour
     public void write_to_file()
     {
         name = "test2-1";
-        //put name inside the string itself
-        System.IO.File.AppendAllText("./text/" + name + ".txt", timer.ToString());
+		//put name inside the string itself
+		string filePath = Application.persistentDataPath + name + ".txt" ;
+		System.IO.File.AppendAllText(filePath, timer.ToString() ); 
+       
+        
+
         timer = 0.0f;
     }
 }
