@@ -1,42 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR;
 
 public class Head_tracker : MonoBehaviour
 {
-	// hello uwu woo wee its time to roll babyyy 
 	// Start is called before the first frame update
+	// User needs to initialize XR Rig gameobject from scene explorer
+	[SerializeField] GameObject XRRig_object;
+	XROrigin XROrigin_script;
+	Camera XR_camera;
+
+
+	private void get_XROrigin_script()
+	{
+		XROrigin_script = XRRig_object.GetComponent<XROrigin>();
+	}
+
+
 	void Start()
 	{
-		
+		get_XROrigin_script();
 	}
 
 	public InputDevice hmd;
 	private void FixedUpdate()
 	{
 
-		var inputDevices = new List<InputDevice>();
-		InputDevices.GetDevices(inputDevices);
 
-		foreach (var device in inputDevices)
-		{
-			// Debug.Log(device.characteristics.ToString());
-			if (device.characteristics.ToString() == "HeadMounted, TrackedDevice") {
-				hmd  = device;
-			}
-
-		}
 		if(hmd!=null){
 			Vector3 device_pos;
 			Vector3 eye_pos;
 			Quaternion device_rot;
 			Quaternion eye_rot;
-			hmd.TryGetFeatureValue(CommonUsages.devicePosition, out device_pos);
-			hmd.TryGetFeatureValue(CommonUsages.centerEyePosition, out  eye_pos);
-			hmd.TryGetFeatureValue(CommonUsages.deviceRotation, out device_rot);
-			hmd.TryGetFeatureValue(CommonUsages.centerEyeRotation, out eye_rot);
-
 
 			Debug.Log("device pos: " + device_pos);			
 			Debug.Log("eye pos: " + eye_pos);
