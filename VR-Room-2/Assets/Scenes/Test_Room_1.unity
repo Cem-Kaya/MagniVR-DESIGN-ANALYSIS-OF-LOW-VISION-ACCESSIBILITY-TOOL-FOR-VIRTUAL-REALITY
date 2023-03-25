@@ -1598,7 +1598,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdc69043a810a8419c4225b7e2809b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XRRig_object: {fileID: 1180013151}
+  XR_camera: {fileID: 1676219978}
+  left_hand_controller: {fileID: 155499096}
+  right_hand_controller: {fileID: 1745440870}
 --- !u!1001 &1476626972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1669,7 +1671,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
