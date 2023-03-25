@@ -1598,6 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdc69043a810a8419c4225b7e2809b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  XRRig_object: {fileID: 1180013151}
 --- !u!1001 &1476626972
 PrefabInstance:
   m_ObjectHideFlags: 0
