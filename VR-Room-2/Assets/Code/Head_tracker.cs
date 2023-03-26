@@ -22,18 +22,6 @@ public class Head_tracker : MonoBehaviour
 	private void FixedUpdate()
 	{
 
-		Quaternion camera_rot = XR_camera.transform.rotation;
-        Vector3 camera_forward = XR_camera.transform.forward;
-        Vector3 camera_pos = XR_camera.transform.position;
-        //multipyle camera pos with rotation 
-		Debug.Log("cam pos: " + camera_pos);
-		
-
-		
-		Debug.Log("cam forward: " + camera_forward);			
-		Debug.Log("cam rot: " + camera_rot);
-		gameObject.transform.position = camera_pos + camera_forward * 0.3f;
-		gameObject.transform.rotation = camera_rot;
 
         
 
@@ -44,6 +32,18 @@ public class Head_tracker : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		
-	}
+        Quaternion camera_rot = XR_camera.transform.rotation;
+        Vector3 camera_forward = XR_camera.transform.forward;
+        Vector3 camera_pos = XR_camera.transform.position;
+        //multipyle camera pos with rotation 
+        Debug.Log("cam pos: " + camera_pos);
+
+
+
+        Debug.Log("cam forward: " + camera_forward);
+        Debug.Log("cam rot: " + camera_rot);
+        gameObject.transform.position = camera_pos + camera_forward * 1f;
+        gameObject.transform.rotation = camera_rot;
+
+    }
 }
