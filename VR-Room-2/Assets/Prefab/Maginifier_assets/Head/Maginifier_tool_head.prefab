@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 3039352472707698395}
   - component: {fileID: 42308543}
   m_Layer: 0
-  m_Name: Maginifier_tool
+  m_Name: Maginifier_tool_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
