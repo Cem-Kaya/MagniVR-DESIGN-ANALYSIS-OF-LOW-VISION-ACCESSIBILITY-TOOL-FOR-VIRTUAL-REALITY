@@ -12,6 +12,12 @@ public class Ui_tracker : MonoBehaviour
 	private int display_state ;
 	private int cam_state ;
 
+	public void onSliderValueChanged(float value)
+	{
+		mag_man_script.set_camera_fov(value);
+		Debug.Log(value);
+	}
+
 
 	public void change_display_state(int x)
 	{

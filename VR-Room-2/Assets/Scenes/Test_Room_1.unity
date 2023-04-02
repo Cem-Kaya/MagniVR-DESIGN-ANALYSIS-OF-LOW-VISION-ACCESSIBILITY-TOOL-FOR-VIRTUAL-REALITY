@@ -1212,6 +1212,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magnifier_manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6229438088441804819, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229438088441804819, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430809942967104221, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430809942967104221, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430809942967104221, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df7aa48ad024ae4ab68c539a9d9c53b, type: 3}
 --- !u!1001 &764694622
