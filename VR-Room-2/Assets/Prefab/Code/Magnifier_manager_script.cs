@@ -14,6 +14,23 @@ public class Magnifier_manager_script : MonoBehaviour
 	[SerializeField] int display_state = 1 ;// 0 head, 1 right hand, 2 left hand 
 	[SerializeField] int cam_state = 1 ;// 0 head, 1 right hand, 2 left hand 
 	
+	[SerializeField] bool canvas_exists =true;
+	public int get_display_state(){
+		return display_state;
+	}
+	public void set_display_state(int state){
+		display_state = state;
+	}
+
+	public int get_cam_state(){
+		return cam_state;
+	}
+	public void set_cam_state(int state){
+		cam_state = state;
+	}
+
+
+
 	public Camera get_XR_camera()
 	{
 		return XR_camera;
@@ -144,4 +161,14 @@ public class Magnifier_manager_script : MonoBehaviour
 		display_state++ ;
 		display_state%= 3 ;
 	}
+
+	public void on_click_exit_ui()
+	{
+        GameObject canvas = transform.Find("Canvas_magnifier").gameObject;
+		canvas.SetActive(false);
+		//delete the gameobject this script is connected to
+		Destroy(canvas);
+		canvas_exists = false;
+
+    }
 }
