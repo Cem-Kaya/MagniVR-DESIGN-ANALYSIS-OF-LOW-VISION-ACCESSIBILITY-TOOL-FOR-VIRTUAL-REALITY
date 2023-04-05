@@ -15,7 +15,8 @@ without the use of any accessibility tools, and three more times using different
 tools. The study used 3 different types of accessibility tools: a right-hand magnifier, a
 left-hand magnifier, and a SeeingVR magnifier. The results of the study indicate that the
 magnifier tools were a huge help for the participants with low vision in completing the tasks,
-and reduced the cognitive load during the execution of the task. 
+and reduced the cognitive load during the execution of the task. A comprehensive report is available
+in the repository in the form of a PDF file.
 
 # Images 
 ## Left-hand Magnifier
@@ -25,3 +26,13 @@ and reduced the cognitive load during the execution of the task.
 ## Re-implementation of SeeingVR
 ![image](https://user-images.githubusercontent.com/84244352/230127695-c677294e-01cb-473c-a248-84ef5421bd18.png)
 
+# Data
+## Duration of Task Completion by Each Participant
+![image](https://user-images.githubusercontent.com/84244352/230128745-cbff2ad7-be48-45da-a437-68fcf973fba4.png)
+![image](https://user-images.githubusercontent.com/84244352/230128836-5372e41e-4774-40ef-8657-08ee4d91e12a.png)
+![image](https://user-images.githubusercontent.com/84244352/230128895-179c66a5-e1aa-4b37-8991-93c0053c0437.png)
+
+# Developers
+## Cem Kaya
+## Baha Mert Ersoy
+## Murat Karaca
