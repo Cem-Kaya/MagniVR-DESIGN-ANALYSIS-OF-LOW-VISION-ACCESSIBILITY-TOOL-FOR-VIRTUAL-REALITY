@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.XR;
 
 public class Magnifier_manager_script : MonoBehaviour
 {
@@ -14,7 +17,40 @@ public class Magnifier_manager_script : MonoBehaviour
 	[SerializeField] int display_state = 1 ;// 0 head, 1 right hand, 2 left hand 
 	[SerializeField] int cam_state = 1 ;// 0 head, 1 right hand, 2 left hand 
 	
-	[SerializeField] bool canvas_exists =true;
+	[SerializeField] bool canvas_exists = true;
+
+
+	[SerializeField] private InputDevice left_hand_device;
+	[SerializeField] private InputDevice right_hand_device;
+
+	private bool right_primary_button_touch = false;
+	private bool right_secondary_button_touch = false;
+
+	private bool left_primary_button_touch = false;
+	private bool left_secondary_button_touch = false;
+
+	private Vector2 left_joystick_2DAxis;
+	private Vector2 right_joystick_2DAxis;
+
+	private bool menu_spawnable = true;
+
+	public void set_display_invisible()
+	{
+		//get parent of the current gameobject
+		GameObject mag_man_parent = transform.parent.gameObject;
+		GameObject mag_display = mag_man_parent.transform.Find("Magnifier_display").gameObject;
+		mag_display.SetActive(false);
+		
+	}
+
+	public void set_display_visible()
+	{
+		//get parent of the current gameobject
+		GameObject mag_man_parent = transform.parent.gameObject;
+		GameObject mag_display = mag_man_parent.transform.Find("Magnifier_display").gameObject;
+		mag_display.SetActive(true);
+	}
+
 	public int get_display_state(){
 		return display_state;
 	}
@@ -48,8 +84,165 @@ public class Magnifier_manager_script : MonoBehaviour
 		}
 	}  
 
+	private void get_state_from_input_device()
+	{
+		List<InputDevice> input_devices = new List<InputDevice>();
+		InputDevices.GetDevices(input_devices);
+
+		foreach (var device in input_devices)
+		{
+			//only debug the right hand and left hand controller
+			//characteristics should be held in hand
+			//Debug.Log(string.Format("Device found with name '{0}'", device.characteristics, "role str:", device.role.ToString()));
+
+			
+			// get left hend 
+			//Debug.Log(device.characteristics.ToString());
+			if (device.characteristics.ToString() == "HeldInHand, TrackedDevice, Controller, Left")
+			{
+				left_hand_device = device;
+				//Debug.Log("left hand controller found");
+			}
+			if (device.characteristics.ToString() == "HeldInHand, TrackedDevice, Controller, Right")
+			{
+				right_hand_device = device;
+				//Debug.Log("right hand controller found");
+			}
+
+
+		}
+		/////////////////////////////////////////////
+		
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxis, out left_joystick_2DAxis))
+		{
+			//Debug.Log(string.Format("Primary 2D Axis for left: {0}", tmp_l));
+		}
+		if (right_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxis, out right_joystick_2DAxis))
+		{
+			//Debug.Log(string.Format("Primary 2D Axis for right: {0}", tmp_r));
+		}
+
+		if (right_hand_device.TryGetFeatureValue(CommonUsages.primaryTouch, out right_primary_button_touch))
+		{
+			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
+		}
+		if (right_hand_device.TryGetFeatureValue(CommonUsages.secondaryTouch, out right_secondary_button_touch))
+		{
+			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
+		}
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.primaryTouch, out left_primary_button_touch))
+		{
+			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
+		}
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.secondaryTouch, out left_secondary_button_touch))
+		{
+			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
+		}
+
+
+
+	}
+
+	IEnumerator ensure_2_second_press()
+	{
+		bool never_lifted = true; 
+		for(int i =0; i < 100; i++)
+		{
+			if (! ( right_primary_button_touch  && right_secondary_button_touch && left_primary_button_touch && left_secondary_button_touch))
+			{
+				never_lifted = false;
+				menu_spawnable = true;
+				break;
+			}
+			yield return new WaitForSeconds(0.02f);
+
+		}
+		if (never_lifted)
+		{
+			enable_menu();
+			menu_spawnable = true;
+		}
+		
+	}
+
+	private void set_state_from_input_device()
+	{
+		if (menu_spawnable)
+		{
+			if (right_primary_button_touch && right_secondary_button_touch && left_primary_button_touch && left_secondary_button_touch)
+			{
+				menu_spawnable = false;
+				StartCoroutine(ensure_2_second_press());
+				//Debug.Log("spawning menu from set_state_from_input_device");
+			}
+		}
+
+
+
+		//if (button1 == true && button2 == true && pressable && (Mathf.Abs(tmp_l.y) >= 0.8))
+		//{
+		//	pressable = false;
+		//	StartCoroutine(wait2());
+		//	//min = 2
+		//	if (tmp_l.y >= 0.8)
+		//	{
+		//		if (state == 0 || state == 2)
+		//		{
+		//			if (right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2)
+		//			{
+		//				//Debug.Log("state is "+state + "also fow is " + right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView);
+		//				//seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+		//				right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+
+			//			}
+			//		}
+			//		else if (state == 1)
+			//		{
+			//			if (seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2)
+			//			{
+			//				seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+			//				//right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
+
+			//			}
+			//		}
+			//		//Debug.Log("Changed FOW");
+			//	}
+			//	else if (tmp_l.y <= -0.8)
+			//	{
+			//		if (state == 0 || state == 2)
+			//		{
+			//			if (right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
+			//			{
+			//				//seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+			//				// samthing is wierd here
+			//				//Debug.Log("zooming in seeing vr" + seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView);
+			//				right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+			//			}
+			//		}
+
+			//		else if (state == 1)
+			//		{
+			//			if (seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
+			//			{
+			//				seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+			//				// samthing is wierd here
+			//				//Debug.Log("zooming in seeing vr" + seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView);
+			//				//right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
+			//			}
+			//		}
+
+			//		//Debug.Log("Changed FOW");
+			//	}
+
+			//}
+	}
+
 
 	void FixedUpdate(){
+		get_state_from_input_device();
+		set_state_from_input_device();
+			
+
 
 	}
 	void Start()
@@ -130,6 +323,7 @@ public class Magnifier_manager_script : MonoBehaviour
 		}
 	}
 
+	
 	void to_hand(GameObject obj, GameObject hand_controller )
 	{
 	
@@ -166,11 +360,30 @@ public class Magnifier_manager_script : MonoBehaviour
 
 	public void on_click_exit_ui()
 	{
-        GameObject canvas = transform.Find("Canvas_magnifier").gameObject;
+		GameObject canvas = transform.Find("Canvas_magnifier").gameObject;
 		canvas.SetActive(false);
-		//delete the gameobject this script is connected to
-		Destroy(canvas);
 		canvas_exists = false;
 
-    }
+	}
+
+	public void enable_menu()
+	{
+		GameObject canvas = transform.Find("Canvas_magnifier").gameObject;
+		canvas.SetActive(true);
+		canvas_exists = true;
+
+		// Calculate the new position for the menu
+		Vector3 newPosition = XR_camera.transform.position + XR_camera.transform.forward * 2.0f;
+
+		// Set the new position and rotation of the menu
+		canvas.transform.position = newPosition;
+		canvas.transform.rotation = XR_camera.transform.rotation;
+
+		//rotate canvas 180 degrees in x axis
+		canvas.transform.Rotate(0, 180, 0); 
+
+		// Set the menu to be perpendicular to the parent
+		canvas.transform.forward = XR_camera.transform.forward;
+
+	}
 }
