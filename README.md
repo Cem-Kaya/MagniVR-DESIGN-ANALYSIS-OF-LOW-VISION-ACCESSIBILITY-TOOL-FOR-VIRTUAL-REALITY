@@ -5,7 +5,7 @@
 # Abstract
 The field of Virtual Reality is a rapidly growing and increasingly popular medium,
 however, the accessibility standards for individuals with low vision in VR have not yet been
-fully established, leaving a significant gap in the provision of accessible VR experiences for
+fully implemented, leaving a significant gap in the provision of accessible VR experiences for
 individuals with low vision. The objective of this study was to investigate the effectiveness
 and efficiency of accessibility tools for people with low vision in virtual reality by leveraging
 the 3D modality of VR. Six volunteers participated in the study, three of whom had low
