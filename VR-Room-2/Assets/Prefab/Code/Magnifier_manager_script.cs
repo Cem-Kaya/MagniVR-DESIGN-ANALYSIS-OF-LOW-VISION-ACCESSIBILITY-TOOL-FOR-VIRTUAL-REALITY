@@ -13,7 +13,8 @@ public class Magnifier_manager_script : MonoBehaviour
 	[SerializeField] private GameObject right_hand_controller;
 
 	[SerializeField] private bool hand_state = false;
-	
+	[SerializeField] private bool magnifier_toggle = true;
+
 	[SerializeField] int display_state = 1 ;// 0 head, 1 right hand, 2 left hand 
 	[SerializeField] int cam_state = 1 ;// 0 head, 1 right hand, 2 left hand 
 	
@@ -34,21 +35,40 @@ public class Magnifier_manager_script : MonoBehaviour
 
 	private bool menu_spawnable = true;
 
-	public void set_display_invisible()
+	
+	public void toggle_magnifier()
 	{
-		//get parent of the current gameobject
-		GameObject mag_man_parent = transform.parent.gameObject;
-		GameObject mag_display = mag_man_parent.transform.Find("Magnifier_display").gameObject;
-		mag_display.SetActive(false);
-		
+		if (magnifier_toggle)
+		{
+			magnifier_toggle = false;
+			deactivate_magnifier();
+		}
+		else
+		{
+			magnifier_toggle = true;
+			activate_magnifier();
+		}
 	}
 
-	public void set_display_visible()
+	public void deactivate_magnifier()
 	{
 		//get parent of the current gameobject
 		GameObject mag_man_parent = transform.parent.gameObject;
 		GameObject mag_display = mag_man_parent.transform.Find("Magnifier_display").gameObject;
+		GameObject mag_cam = mag_man_parent.transform.Find("Magnifier_cam").gameObject;
+		mag_display.SetActive(false);
+		mag_cam.SetActive(false);		
+	}
+
+	public void activate_magnifier()
+	{
+		//get parent of the current gameobject
+		GameObject mag_man_parent = transform.parent.gameObject;
+		GameObject mag_display = mag_man_parent.transform.Find("Magnifier_display").gameObject;
+		GameObject mag_cam = mag_man_parent.transform.Find("Magnifier_cam").gameObject;
 		mag_display.SetActive(true);
+		mag_cam.SetActive(true);
+
 	}
 
 	public int get_display_state(){
@@ -71,7 +91,7 @@ public class Magnifier_manager_script : MonoBehaviour
 	public void set_display_size(float scale)
 	{
 		GameObject display = transform.Find("Magnifier_display").gameObject; 
-		display.transform.localScale = new Vector3(scale/10.0f, scale / 10.0f , 1);
+		display.transform.localScale = new Vector3(scale/15.0f, scale / 15.0f , 1);
 	}
 
 	public Camera get_XR_camera()
