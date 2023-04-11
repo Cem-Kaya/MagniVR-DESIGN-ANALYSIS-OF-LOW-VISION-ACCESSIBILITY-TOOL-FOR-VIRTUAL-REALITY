@@ -23,6 +23,10 @@ public class Ui_tracker : MonoBehaviour
 		
 	}
 
+	public void toggle_magnifier()
+	{
+		mag_man_script.toggle_magnifier();
+	}
 
 	public void change_display_state(int x)
 	{

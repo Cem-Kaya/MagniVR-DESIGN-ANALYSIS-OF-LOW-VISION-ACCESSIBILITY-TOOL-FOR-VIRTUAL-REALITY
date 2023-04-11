@@ -51,6 +51,7 @@ MonoBehaviour:
   left_hand_controller: {fileID: 0}
   right_hand_controller: {fileID: 0}
   hand_state: 0
+  magnifier_toggle: 1
   display_state: 2
   cam_state: 2
   canvas_exists: 1
@@ -246,6 +247,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3515525916955496046, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5411154583893227340, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -255,6 +261,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas_magnifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276711515608128990, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760170465550079760, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737444915739078893, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9108600903184045869, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}

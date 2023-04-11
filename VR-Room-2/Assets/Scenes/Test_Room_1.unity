@@ -1137,6 +1137,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 164049661945080739, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2059090663754881158, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1207,6 +1212,11 @@ PrefabInstance:
       propertyPath: right_hand_controller
       value: 
       objectReference: {fileID: 1745440870}
+    - target: {fileID: 5462542704903066912, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6093470502094984282, guid: 5df7aa48ad024ae4ab68c539a9d9c53b,
         type: 3}
       propertyPath: m_Name
@@ -1769,7 +1779,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}

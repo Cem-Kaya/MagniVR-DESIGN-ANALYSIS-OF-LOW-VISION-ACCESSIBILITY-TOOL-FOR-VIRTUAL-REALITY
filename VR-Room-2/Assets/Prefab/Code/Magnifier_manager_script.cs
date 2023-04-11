@@ -29,11 +29,15 @@ public class Magnifier_manager_script : MonoBehaviour
 
 	private bool left_primary_button_touch = false;
 	private bool left_secondary_button_touch = false;
+	private bool left_primary_button_pressed = false;
+	private bool left_secondary_button_pressed = false;
+
 
 	private Vector2 left_joystick_2DAxis;
 	private Vector2 right_joystick_2DAxis;
 
 	private bool menu_spawnable = true;
+	private bool mag_toggleable = true;
 
 	
 	public void toggle_magnifier()
@@ -53,9 +57,8 @@ public class Magnifier_manager_script : MonoBehaviour
 	public void deactivate_magnifier()
 	{
 		//get parent of the current gameobject
-		GameObject mag_man_parent = transform.parent.gameObject;
-		GameObject mag_display = mag_man_parent.transform.Find("Magnifier_display").gameObject;
-		GameObject mag_cam = mag_man_parent.transform.Find("Magnifier_cam").gameObject;
+		GameObject mag_display = transform.Find("Magnifier_display").gameObject;
+		GameObject mag_cam = transform.Find("Magnifier_cam").gameObject;
 		mag_display.SetActive(false);
 		mag_cam.SetActive(false);		
 	}
@@ -63,9 +66,8 @@ public class Magnifier_manager_script : MonoBehaviour
 	public void activate_magnifier()
 	{
 		//get parent of the current gameobject
-		GameObject mag_man_parent = transform.parent.gameObject;
-		GameObject mag_display = mag_man_parent.transform.Find("Magnifier_display").gameObject;
-		GameObject mag_cam = mag_man_parent.transform.Find("Magnifier_cam").gameObject;
+		GameObject mag_display =transform.Find("Magnifier_display").gameObject;
+		GameObject mag_cam = transform.Find("Magnifier_cam").gameObject;
 		mag_display.SetActive(true);
 		mag_cam.SetActive(true);
 
@@ -163,6 +165,14 @@ public class Magnifier_manager_script : MonoBehaviour
 		{
 			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
 		}
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.primaryButton, out left_primary_button_pressed))
+		{
+			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
+		}
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.secondaryButton, out left_secondary_button_pressed))
+		{
+			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
+		}
 
 
 
@@ -190,6 +200,15 @@ public class Magnifier_manager_script : MonoBehaviour
 		
 	}
 
+
+	IEnumerator ensure_1_second_press()
+	{	 		
+		yield return new WaitForSeconds(1);
+		mag_toggleable = true;
+		
+		
+	}
+
 	private void set_state_from_input_device()
 	{
 		if (menu_spawnable)
@@ -202,64 +221,21 @@ public class Magnifier_manager_script : MonoBehaviour
 			}
 		}
 
+		if (mag_toggleable){
+
+			if (right_primary_button_touch && right_secondary_button_touch && left_primary_button_pressed && left_secondary_button_pressed)
+			{
+				mag_toggleable = false;
+				StartCoroutine(ensure_1_second_press());
+				toggle_magnifier();
+
+			}
+
+		}
 
 
-		//if (button1 == true && button2 == true && pressable && (Mathf.Abs(tmp_l.y) >= 0.8))
-		//{
-		//	pressable = false;
-		//	StartCoroutine(wait2());
-		//	//min = 2
-		//	if (tmp_l.y >= 0.8)
-		//	{
-		//		if (state == 0 || state == 2)
-		//		{
-		//			if (right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2)
-		//			{
-		//				//Debug.Log("state is "+state + "also fow is " + right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView);
-		//				//seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
-		//				right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
 
-			//			}
-			//		}
-			//		else if (state == 1)
-			//		{
-			//			if (seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView <= 130 - 2)
-			//			{
-			//				seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
-			//				//right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView += 2;
 
-			//			}
-			//		}
-			//		//Debug.Log("Changed FOW");
-			//	}
-			//	else if (tmp_l.y <= -0.8)
-			//	{
-			//		if (state == 0 || state == 2)
-			//		{
-			//			if (right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
-			//			{
-			//				//seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
-			//				// samthing is wierd here
-			//				//Debug.Log("zooming in seeing vr" + seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView);
-			//				right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
-			//			}
-			//		}
-
-			//		else if (state == 1)
-			//		{
-			//			if (seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView >= 2 + 2)
-			//			{
-			//				seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
-			//				// samthing is wierd here
-			//				//Debug.Log("zooming in seeing vr" + seeing_vr_magnifier.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView);
-			//				//right_hand_magnifier.transform.Find("zoom_camera").gameObject.GetComponent<Camera>().fieldOfView -= 2;
-			//			}
-			//		}
-
-			//		//Debug.Log("Changed FOW");
-			//	}
-
-			//}
 	}
 
 
@@ -267,8 +243,6 @@ public class Magnifier_manager_script : MonoBehaviour
 		get_state_from_input_device();
 		set_state_from_input_device();
 			
-
-
 	}
 	void Start()
 	{
