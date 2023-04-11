@@ -68,6 +68,11 @@ public class Magnifier_manager_script : MonoBehaviour
 	public void set_camera_fov(float fov){
 		transform.Find("Magnifier_cam").gameObject.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView = fov;
 	}
+	public void set_display_size(float scale)
+	{
+		GameObject display = transform.Find("Magnifier_display").gameObject; 
+		display.transform.localScale = new Vector3(scale/10.0f, scale / 10.0f , 1);
+	}
 
 	public Camera get_XR_camera()
 	{
