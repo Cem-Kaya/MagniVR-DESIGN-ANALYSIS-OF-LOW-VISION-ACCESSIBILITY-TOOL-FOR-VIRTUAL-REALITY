@@ -51,6 +51,7 @@ public class Magnifier_manager_script : MonoBehaviour
 		{
 			magnifier_toggle = true;
 			activate_magnifier();
+			set_state_from_input_device();
 		}
 	}
 
@@ -70,6 +71,7 @@ public class Magnifier_manager_script : MonoBehaviour
 		GameObject mag_cam = transform.Find("Magnifier_cam").gameObject;
 		mag_display.SetActive(true);
 		mag_cam.SetActive(true);
+
 
 	}
 

@@ -357,7 +357,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magnifier_display
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 42308543, guid: 79efd598aa128664c98c5f5ee1575075, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 79efd598aa128664c98c5f5ee1575075, type: 3}
 --- !u!4 &5765067487781386509 stripped
 Transform:
