@@ -68,7 +68,7 @@ public class Magnifier_manager_script : MonoBehaviour
 			if (left_joystick_2DAxis.y >= 0.5f)
 			{
                 //Debug.Log("zoom in");
-                if (get_camera_fov() + 1.0f <= max)
+                if ((get_camera_fov() + 1.0f) <= max)
 				{
                     set_camera_fov(get_camera_fov() + 1.0f);
                 }
@@ -76,7 +76,7 @@ public class Magnifier_manager_script : MonoBehaviour
 			else if(left_joystick_2DAxis.y <= -0.5f)
 			{
                 //Debug.Log("zoom in");
-                if (get_camera_fov() - 1.0f >= min)
+                if ((get_camera_fov() - 1.0f) >= min)
                 {
                     set_camera_fov(get_camera_fov() - 1.0f);
                 }
