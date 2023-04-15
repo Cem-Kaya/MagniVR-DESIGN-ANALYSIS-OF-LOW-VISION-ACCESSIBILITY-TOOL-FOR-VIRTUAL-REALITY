@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using UnityEngine.XR;
 
 public class Magnifier_manager_script : MonoBehaviour
@@ -58,7 +59,29 @@ public class Magnifier_manager_script : MonoBehaviour
 	}
 	public void adjust_zoom()
 	{
-
+        GameObject can_mag = transform.Find("Canvas_magnifier").gameObject;
+		GameObject fov_slider = can_mag.transform.Find("FOV Slider").gameObject;
+		float max = fov_slider.GetComponent<Slider>().maxValue;
+		float min = fov_slider.GetComponent<Slider>().minValue;
+        if (right_primary_button_touch && right_secondary_button_touch) { 
+			//if user is pointing upwards with left joystick 2d axis
+			if (left_joystick_2DAxis.y >= 0.5f)
+			{
+                //Debug.Log("zoom in");
+                if (get_camera_fov() + 1.0f <= max)
+				{
+                    set_camera_fov(get_camera_fov() + 1.0f);
+                }
+            }
+			else if(left_joystick_2DAxis.y <= -0.5f)
+			{
+                //Debug.Log("zoom in");
+                if (get_camera_fov() - 1.0f >= min)
+                {
+                    set_camera_fov(get_camera_fov() - 1.0f);
+                }
+            }
+		}
 	}
 
 
