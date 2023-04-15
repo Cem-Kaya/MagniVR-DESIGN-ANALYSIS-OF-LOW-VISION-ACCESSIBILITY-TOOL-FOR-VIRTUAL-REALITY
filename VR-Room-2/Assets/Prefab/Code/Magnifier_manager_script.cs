@@ -26,20 +26,22 @@ public class Magnifier_manager_script : MonoBehaviour
 
 	private bool right_primary_button_touch = false;
 	private bool right_secondary_button_touch = false;
+    private bool right_joystick_pressed = false;
 
-	private bool left_primary_button_touch = false;
+    private bool left_primary_button_touch = false;
 	private bool left_secondary_button_touch = false;
 	private bool left_primary_button_pressed = false;
 	private bool left_secondary_button_pressed = false;
+	private bool left_joystick_pressed = false;
 
 
-	private Vector2 left_joystick_2DAxis;
+    private Vector2 left_joystick_2DAxis;
 	private Vector2 right_joystick_2DAxis;
 
 	private bool menu_spawnable = true;
 	private bool mag_toggleable = true;
+	private bool can_zoom = true;
 
-	
 	public void toggle_magnifier()
 	{
 		if (magnifier_toggle)
@@ -54,6 +56,11 @@ public class Magnifier_manager_script : MonoBehaviour
 			set_state_from_input_device();
 		}
 	}
+	public void adjust_zoom()
+	{
+
+	}
+
 
 	public void deactivate_magnifier()
 	{
@@ -115,15 +122,7 @@ public class Magnifier_manager_script : MonoBehaviour
 		return XR_camera;
 	}
 
-	public GameObject get_hand_controller()
-	{
-		if (hand_state == false){
-			return right_hand_controller;
-		}
-		else{
-			return left_hand_controller;
-		}
-	}  
+	
 
 	private void get_state_from_input_device()
 	{
@@ -154,10 +153,7 @@ public class Magnifier_manager_script : MonoBehaviour
 		}
 		/////////////////////////////////////////////
 		
-		if (left_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxis, out left_joystick_2DAxis))
-		{
-			//Debug.Log(string.Format("Primary 2D Axis for left: {0}", tmp_l));
-		}
+
 		if (right_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxis, out right_joystick_2DAxis))
 		{
 			//Debug.Log(string.Format("Primary 2D Axis for right: {0}", tmp_r));
@@ -171,7 +167,13 @@ public class Magnifier_manager_script : MonoBehaviour
 		{
 			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
 		}
-		if (left_hand_device.TryGetFeatureValue(CommonUsages.primaryTouch, out left_primary_button_touch))
+
+
+        if (left_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxis, out left_joystick_2DAxis))
+        {
+            //Debug.Log(string.Format("Primary 2D Axis for left: {0}", tmp_l));
+        }
+        if (left_hand_device.TryGetFeatureValue(CommonUsages.primaryTouch, out left_primary_button_touch))
 		{
 			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
 		}
@@ -187,10 +189,16 @@ public class Magnifier_manager_script : MonoBehaviour
 		{
 			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
 		}
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out left_joystick_pressed)) 
+		{
+
+		}
 
 
 
-	}
+
+
+    }
 
 	IEnumerator ensure_2_second_press()
 	{
@@ -222,6 +230,13 @@ public class Magnifier_manager_script : MonoBehaviour
 		
 		
 	}
+	IEnumerator ensure_0_2_second_press()
+	{
+		yield return new WaitForSeconds(0.2f);
+		can_zoom = true;
+	}
+
+
 
 	private void set_state_from_input_device()
 	{
@@ -245,6 +260,12 @@ public class Magnifier_manager_script : MonoBehaviour
 
 			}
 
+		}
+		if(can_zoom)
+		{
+			can_zoom = false;
+			StartCoroutine(ensure_0_2_second_press());
+			adjust_zoom();
 		}
 
 
@@ -342,6 +363,7 @@ public class Magnifier_manager_script : MonoBehaviour
 	
 		Quaternion hand_rot = hand_controller.transform.rotation;
 		Vector3 hand_up = hand_controller.transform.up;
+		Vector3 hand_forward = hand_controller.transform.forward;
 		Vector3 hand_pos = hand_controller.transform.position;
 		//multipyle camera pos with rotation 
 		//Debug.Log("cam pos: " + camera_pos);
@@ -350,8 +372,13 @@ public class Magnifier_manager_script : MonoBehaviour
 
 		//Debug.Log("cam forward: " + camera_forward);
 		//Debug.Log("cam rot: " + camera_rot);
-		obj.transform.position = hand_pos + hand_up * 0.2f;
-		obj.transform.rotation = hand_rot;
+		// Add 45 degrees rotation in the x-axis relative to the hand's rotation
+		Quaternion x_axis_rotation = Quaternion.Euler(45, 0, 0);
+		Quaternion final_rotation = hand_rot * x_axis_rotation;
+
+
+		obj.transform.position = hand_pos + hand_up * 0.2f - hand_forward *0.1f;
+		obj.transform.rotation = final_rotation;
 	}
 
 	void to_camera(GameObject obj, Camera XR_camera)

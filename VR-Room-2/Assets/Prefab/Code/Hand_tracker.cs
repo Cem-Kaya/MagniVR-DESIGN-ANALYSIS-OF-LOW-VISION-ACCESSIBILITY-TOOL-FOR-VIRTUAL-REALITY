@@ -17,20 +17,20 @@ public class Hand_tracker : MonoBehaviour
 
 	void Update()
 	{
-		// get perants scipt 
-		hand_controller = GetComponentInParent<Magnifier_manager_script>().get_hand_controller();
+	//	// get perants scipt 
+	//	hand_controller = GetComponentInParent<Magnifier_manager_script>().get_hand_controller();
 
-		Quaternion hand_rot = hand_controller.transform.rotation;
-		Vector3 hand_up = hand_controller.transform.up;
-		Vector3 hand_pos = hand_controller.transform.position;
-		//multipyle camera pos with rotation 
-		//Debug.Log("cam pos: " + camera_pos);
+	//	Quaternion hand_rot = hand_controller.transform.rotation;
+	//	Vector3 hand_up = hand_controller.transform.up;
+	//	Vector3 hand_pos = hand_controller.transform.position;
+	//	//multipyle camera pos with rotation 
+	//	//Debug.Log("cam pos: " + camera_pos);
 
 
 
-		//Debug.Log("cam forward: " + camera_forward);
-		//Debug.Log("cam rot: " + camera_rot);
-		gameObject.transform.position = hand_pos + hand_up * 0.2f;
-		gameObject.transform.rotation = hand_rot;
+	//	//Debug.Log("cam forward: " + camera_forward);
+	//	//Debug.Log("cam rot: " + camera_rot);
+	//	gameObject.transform.position = hand_pos + hand_up * 0.2f;
+	//	gameObject.transform.rotation = hand_rot;
 	}
 }
