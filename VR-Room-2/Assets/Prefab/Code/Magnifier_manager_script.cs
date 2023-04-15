@@ -27,16 +27,16 @@ public class Magnifier_manager_script : MonoBehaviour
 
 	private bool right_primary_button_touch = false;
 	private bool right_secondary_button_touch = false;
-    private bool right_joystick_pressed = false;
+	private bool right_joystick_pressed = false;
 
-    private bool left_primary_button_touch = false;
+	private bool left_primary_button_touch = false;
 	private bool left_secondary_button_touch = false;
 	private bool left_primary_button_pressed = false;
 	private bool left_secondary_button_pressed = false;
 	private bool left_joystick_pressed = false;
 
 
-    private Vector2 left_joystick_2DAxis;
+	private Vector2 left_joystick_2DAxis;
 	private Vector2 right_joystick_2DAxis;
 
 	private bool menu_spawnable = true;
@@ -59,28 +59,30 @@ public class Magnifier_manager_script : MonoBehaviour
 	}
 	public void adjust_zoom()
 	{
-        GameObject can_mag = transform.Find("Canvas_magnifier").gameObject;
+		GameObject can_mag = transform.Find("Canvas_magnifier").gameObject;
 		GameObject fov_slider = can_mag.transform.Find("FOV Slider").gameObject;
 		float max = fov_slider.GetComponent<Slider>().maxValue;
 		float min = fov_slider.GetComponent<Slider>().minValue;
-        if (right_primary_button_touch && right_secondary_button_touch) { 
+		const float adj_size = 2.5f;
+		if (right_primary_button_touch && right_secondary_button_touch && left_joystick_pressed) { 
 			//if user is pointing upwards with left joystick 2d axis
 			if (left_joystick_2DAxis.y >= 0.5f)
 			{
-                //Debug.Log("zoom in");
-                if ((get_camera_fov() + 1.0f) <= max)
+				//Debug.Log("zoom in");
+				if ((get_camera_fov() - adj_size ) >= min)
 				{
-                    set_camera_fov(get_camera_fov() + 1.0f);
-                }
-            }
+					set_camera_fov(get_camera_fov() - adj_size);
+				}
+			}
 			else if(left_joystick_2DAxis.y <= -0.5f)
 			{
-                //Debug.Log("zoom in");
-                if ((get_camera_fov() - 1.0f) >= min)
-                {
-                    set_camera_fov(get_camera_fov() - 1.0f);
-                }
-            }
+				//Debug.Log("zoom in");
+				if ((get_camera_fov() + adj_size) <= min)
+				{
+					set_camera_fov(get_camera_fov() + adj_size);
+				}
+			}
+
 		}
 	}
 
@@ -192,11 +194,14 @@ public class Magnifier_manager_script : MonoBehaviour
 		}
 
 
-        if (left_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxis, out left_joystick_2DAxis))
-        {
-            //Debug.Log(string.Format("Primary 2D Axis for left: {0}", tmp_l));
-        }
-        if (left_hand_device.TryGetFeatureValue(CommonUsages.primaryTouch, out left_primary_button_touch))
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxis, out left_joystick_2DAxis))
+		{
+			//Debug.Log(string.Format("Primary 2D Axis for left: {0}", tmp_l));
+		}
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out left_joystick_pressed))
+		{
+		}
+		if (left_hand_device.TryGetFeatureValue(CommonUsages.primaryTouch, out left_primary_button_touch))
 		{
 			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
 		}
@@ -212,16 +217,13 @@ public class Magnifier_manager_script : MonoBehaviour
 		{
 			//Debug.Log(string.Format("right_primary_button_touch: {0}", right_primary_button_touch));
 		}
-		if (left_hand_device.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out left_joystick_pressed)) 
-		{
-
-		}
 
 
 
 
 
-    }
+
+	}
 
 	IEnumerator ensure_2_second_press()
 	{
@@ -332,7 +334,7 @@ public class Magnifier_manager_script : MonoBehaviour
 			GameObject display = transform.Find("Magnifier_display").gameObject;
 
 			//get child named " camera"of this object			
-			to_hand(display, right_hand_controller);
+			to_hand_display(display, right_hand_controller);
 
 
 		}
@@ -342,7 +344,7 @@ public class Magnifier_manager_script : MonoBehaviour
 			GameObject display = transform.Find("Magnifier_display").gameObject;
 
 			//get child named " camera"of this object			
-			to_hand(display, left_hand_controller);
+			to_hand_display(display, left_hand_controller);
 
 		}
 	}
@@ -365,7 +367,7 @@ public class Magnifier_manager_script : MonoBehaviour
 			GameObject cam = transform.Find("Magnifier_cam").gameObject;
 
 			//get child named " camera"of this object			
-			to_hand(cam, right_hand_controller);
+			to_hand_cam(cam, right_hand_controller);
 
 
 		}
@@ -375,13 +377,13 @@ public class Magnifier_manager_script : MonoBehaviour
 			GameObject cam = transform.Find("Magnifier_cam").gameObject;
 
 			//get child named " camera"of this object			
-			to_hand(cam, left_hand_controller);
+			to_hand_cam(cam, left_hand_controller);
 
 		}
 	}
 
 	
-	void to_hand(GameObject obj, GameObject hand_controller )
+	void to_hand_display(GameObject obj, GameObject hand_controller )
 	{
 	
 		Quaternion hand_rot = hand_controller.transform.rotation;
@@ -402,6 +404,26 @@ public class Magnifier_manager_script : MonoBehaviour
 
 		obj.transform.position = hand_pos + hand_up * 0.2f - hand_forward *0.1f;
 		obj.transform.rotation = final_rotation;
+	}
+	void to_hand_cam(GameObject obj, GameObject hand_controller)
+	{
+
+		Quaternion hand_rot = hand_controller.transform.rotation;
+		Vector3 hand_up = hand_controller.transform.up;
+		Vector3 hand_forward = hand_controller.transform.forward;
+		Vector3 hand_pos = hand_controller.transform.position;
+		//multipyle camera pos with rotation 
+		//Debug.Log("cam pos: " + camera_pos);
+
+
+
+		//Debug.Log("cam forward: " + camera_forward);
+		//Debug.Log("cam rot: " + camera_rot);
+		// Add 45 degrees rotation in the x-axis relative to the hand's rotation
+		
+
+		obj.transform.position = hand_pos + hand_up * 0.2f - hand_forward * 0.1f;
+		obj.transform.rotation = hand_rot;
 	}
 
 	void to_camera(GameObject obj, Camera XR_camera)
