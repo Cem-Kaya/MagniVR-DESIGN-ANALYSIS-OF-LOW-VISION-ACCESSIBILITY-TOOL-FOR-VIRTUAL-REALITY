@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting;
 
 public class Ui_tracker : MonoBehaviour
 {
@@ -15,12 +17,49 @@ public class Ui_tracker : MonoBehaviour
 	public void on_zoom_slider_value_changed (float value)
 	{
 		mag_man_script.set_camera_fov(value);
-		
+		set_zoom_slider_ui();
 	}
 	public void on_display_size_slider_value_changed(float value)
 	{
 		mag_man_script.set_display_size(value);
+		set_display_slider_ui();
 		
+	}
+
+	private void set_zoom_slider_ui()
+	{
+		// have to scale to right range
+		float current_fov = mag_man_script.get_camera_fov();
+		
+		GameObject slider_parent = transform.Find("FOV Slider").gameObject;
+		GameObject handle_slide_area = slider_parent.transform.Find("Handle Slide Area").gameObject;
+		GameObject obj_text = handle_slide_area.transform.Find("Percentage_Display").gameObject;
+		TextMeshProUGUI text = obj_text.GetComponent<TextMeshProUGUI>();
+		float min = slider_parent.GetComponent<Slider>().minValue;
+		float max = slider_parent.GetComponent<Slider>().maxValue;
+
+		slider_parent.GetComponent<Slider>().value = current_fov;
+		current_fov = ((current_fov - min ) / (max - min)) * 100.0f;
+		text.text = current_fov.ToString("F0") + "%";
+
+
+	}
+
+	private void set_display_slider_ui()
+	{
+		// have to scale to right range
+		float current_display_size = mag_man_script.get_display_size();
+
+		GameObject slider_parent = transform.Find("Display Size Slider").gameObject;
+		GameObject handle_slide_area = slider_parent.transform.Find("Handle Slide Area").gameObject;
+		GameObject obj_text = handle_slide_area.transform.Find("Percentage_Display").gameObject;
+		TextMeshProUGUI text = obj_text.GetComponent<TextMeshProUGUI>();
+		float min = slider_parent.GetComponent<Slider>().minValue;
+		float max = slider_parent.GetComponent<Slider>().maxValue;
+
+		slider_parent.GetComponent<Slider>().value = current_display_size;
+		current_display_size = ((current_display_size - min) / (max - min)) * 100.0f;
+		text.text = current_display_size.ToString("F0") + "%";
 	}
 
 	public void toggle_magnifier()
@@ -99,11 +138,16 @@ public class Ui_tracker : MonoBehaviour
 		active_button.colors = current_state;
 
 	}
+	private void Awake()
+	{
+		magnifier_manager = transform.parent.gameObject;
+		mag_man_script = magnifier_manager.GetComponent<Magnifier_manager_script>();
+	}
+
 	void Start()
 	{
 		//get the object's parent
-		magnifier_manager = transform.parent.gameObject;
-		mag_man_script = magnifier_manager.GetComponent<Magnifier_manager_script>();
+
 		get_states();
 
 		// 0 head, 1 right hand, 2 left hand 
@@ -123,4 +167,14 @@ public class Ui_tracker : MonoBehaviour
 		}
 
 	}
+	
+	//
+	private void OnEnable()
+	{
+		set_zoom_slider_ui();
+		set_display_slider_ui();
+
+	}
+
 }
+

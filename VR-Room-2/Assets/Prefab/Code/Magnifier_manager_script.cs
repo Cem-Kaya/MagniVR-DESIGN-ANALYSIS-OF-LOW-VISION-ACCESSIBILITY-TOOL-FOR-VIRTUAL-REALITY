@@ -74,6 +74,7 @@ public class Magnifier_manager_script : MonoBehaviour
 
 
 	}
+	
 
 	public int get_display_state(){
 		return display_state;
@@ -92,10 +93,21 @@ public class Magnifier_manager_script : MonoBehaviour
 	public void set_camera_fov(float fov){
 		transform.Find("Magnifier_cam").gameObject.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView = fov;
 	}
+	public float get_camera_fov()
+	{
+		return transform.Find("Magnifier_cam").gameObject.transform.Find("Camera").gameObject.GetComponent<Camera>().fieldOfView;
+	}
+
+
 	public void set_display_size(float scale)
 	{
 		GameObject display = transform.Find("Magnifier_display").gameObject; 
 		display.transform.localScale = new Vector3(scale/15.0f, scale / 15.0f , 1);
+	}
+	public float get_display_size()
+	{
+		GameObject display = transform.Find("Magnifier_display").gameObject;
+		return display.transform.localScale.x * 15.0f ;
 	}
 
 	public Camera get_XR_camera()

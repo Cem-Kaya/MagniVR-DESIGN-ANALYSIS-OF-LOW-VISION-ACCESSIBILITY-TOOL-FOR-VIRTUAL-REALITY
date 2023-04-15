@@ -142,6 +142,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4895905702033121259}
+    - target: {fileID: 1284139093188289173, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284139093188289173, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284139093188289173, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284139093188289173, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Ui_tracker, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1517830937217656965, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -151,6 +171,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030590506165323092, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030590506165323092, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030590506165323092, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_MinValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2915209909256032281, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
@@ -281,6 +316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046359340084989676, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_Name
+      value: Percentage_Display
       objectReference: {fileID: 0}
     - target: {fileID: 8737444915739078893, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}

@@ -1063,7 +1063,7 @@ GameObject:
   - component: {fileID: 3210028815344175582}
   - component: {fileID: 7542600809848891208}
   m_Layer: 5
-  m_Name: '%'
+  m_Name: Percentage_Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
