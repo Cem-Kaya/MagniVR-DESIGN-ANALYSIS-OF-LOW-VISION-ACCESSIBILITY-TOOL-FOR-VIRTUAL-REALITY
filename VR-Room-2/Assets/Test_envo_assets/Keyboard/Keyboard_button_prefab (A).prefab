@@ -284,5 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fbfcf7c08c82d49b72f453172a8227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input_log: {fileID: 0}
+  input_log: {fileID: 779778276812065869, guid: 164f46a43ac2b4e4d934eeaa362a168f,
+    type: 3}
   my_text: {fileID: 0}
