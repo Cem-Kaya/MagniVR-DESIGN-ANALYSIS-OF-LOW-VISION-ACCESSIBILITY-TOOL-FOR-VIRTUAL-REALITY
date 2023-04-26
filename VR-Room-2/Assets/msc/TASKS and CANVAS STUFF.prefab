@@ -136,7 +136,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click on Main Menu
+  m_text: 'Click on '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -329,7 +329,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5645755477766582430}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7053464377019368540}
+        m_TargetAssemblyTypeName: Menu_tester, Assembly-CSharp
+        m_MethodName: check_if_correct_button
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4950304407370875152}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5228413674109072000
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +463,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5228413674109072003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7053464377019368540}
+        m_TargetAssemblyTypeName: Menu_tester, Assembly-CSharp
+        m_MethodName: check_if_correct_button
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5228413674109072000}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5228413674349330033
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5228413674349330034}
+  - component: {fileID: 7053464377019368540}
   m_Layer: 5
   m_Name: TASK1 (Room 1,0)
   m_TagString: Untagged
@@ -476,7 +501,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5228413674349330033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.128}
+  m_LocalPosition: {x: 0, y: 0, z: 3.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -494,6 +519,19 @@ RectTransform:
   m_AnchoredPosition: {x: 6.49, y: 0.14}
   m_SizeDelta: {x: 3.77, y: 1.26}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7053464377019368540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228413674349330033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668a71b4cba6a2349aa0151a5a0ef889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room_manager: {fileID: 1948024018}
 --- !u!1 &5228413674354633564
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +923,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5228413674674029495}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7053464377019368540}
+        m_TargetAssemblyTypeName: Menu_tester, Assembly-CSharp
+        m_MethodName: check_if_correct_button
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5228413674674029492}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5228413674776304054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,29 +1058,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Task1ScoreBoard, Assembly-CSharp
-        m_MethodName: end_game
-        m_Mode: 1
+      - m_Target: {fileID: 7053464377019368540}
+        m_TargetAssemblyTypeName: Menu_tester, Assembly-CSharp
+        m_MethodName: check_if_correct_button
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5228413674776304054}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &5228413675458648136
 GameObject:
@@ -1196,6 +1234,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5228413676045752985}
+  - {fileID: 1948024015}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1587,7 +1626,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5616197817338417251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7053464377019368540}
+        m_TargetAssemblyTypeName: Menu_tester, Assembly-CSharp
+        m_MethodName: check_if_correct_button
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7556656902866621557}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8084950916516814941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,6 +1774,97 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &666462805214130514
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5228413676014290818}
+    m_Modifications:
+    - target: {fileID: 666462803939298688, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Room_manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298690, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: teleport_buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298690, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: teleport_buttons.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.705862
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.870291
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.92503
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a025ea2d4f19cc48b82744aeb4693a4, type: 3}
+--- !u!4 &1948024015 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 666462803939298717, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 666462805214130514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1948024018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 666462803939298688, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 666462805214130514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &776599602879801339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1779,21 +1921,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 1.7229999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8941589372800987310, guid: f158a63c5c861274a8adac0b202e9b0f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8941589372800987310, guid: f158a63c5c861274a8adac0b202e9b0f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8941589372800987310, guid: f158a63c5c861274a8adac0b202e9b0f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8941589372800987310, guid: f158a63c5c861274a8adac0b202e9b0f,
         type: 3}
@@ -1854,11 +1981,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8941589372800987310, guid: f158a63c5c861274a8adac0b202e9b0f,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f158a63c5c861274a8adac0b202e9b0f, type: 3}
