@@ -160,12 +160,18 @@ public class Ui_tracker : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		XR_camera = GetComponentInParent<Magnifier_manager_script>().get_XR_camera();
-		if ( Vector3.Magnitude(XR_camera.transform.position - transform.position) >2.5f  )
+		try
 		{
-			transform.position = (XR_camera.transform.position*0.01f  + 0.99f*transform.position)  ;
+			XR_camera = GetComponentInParent<Magnifier_manager_script>().get_XR_camera();
+			if (Vector3.Magnitude(XR_camera.transform.position - transform.position) > 2.5f)
+			{
+				transform.position = (XR_camera.transform.position * 0.01f + 0.99f * transform.position);
+			}
 		}
-
+		catch
+		{
+			Debug.Log("can not find probably due to grabing of the ui");
+		}
 	}
 	
 	//
