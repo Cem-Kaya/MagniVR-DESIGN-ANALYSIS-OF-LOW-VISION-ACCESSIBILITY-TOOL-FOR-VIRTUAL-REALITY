@@ -31,16 +31,15 @@ public class Ui_tracker : MonoBehaviour
 		// have to scale to right range
 		float current_fov = mag_man_script.get_camera_fov();
 		
-		GameObject slider_parent = transform.Find("FOV Slider").gameObject;
-		GameObject handle_slide_area = slider_parent.transform.Find("Handle Slide Area").gameObject;
-				
-		GameObject obj_text = transform.Find("FOV_Percentage_Display").gameObject;
+		GameObject slider_parent = transform.Find("FOV Slider").gameObject;			
+		GameObject silder_extra = transform.Find("Fov_slider_UI_extra").gameObject;
+		GameObject obj_text = silder_extra.transform.Find("FOV_Percentage_Display").gameObject;
 		TextMeshProUGUI text = obj_text.GetComponent<TextMeshProUGUI>();
 		float min = slider_parent.GetComponent<Slider>().minValue;
 		float max = slider_parent.GetComponent<Slider>().maxValue;
 
 		slider_parent.GetComponent<Slider>().value = current_fov;
-		current_fov = ((current_fov - min ) / (max - min)) * 100.0f;
+		current_fov = 100.0f - ((current_fov - min ) / (max - min)) * 100.0f;
 		
 		text.text = current_fov.ToString("F0") + "%";
 
