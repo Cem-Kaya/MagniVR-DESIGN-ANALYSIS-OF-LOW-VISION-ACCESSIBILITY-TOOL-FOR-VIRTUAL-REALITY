@@ -531,6 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668a71b4cba6a2349aa0151a5a0ef889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selected_item_name: 
   room_manager: {fileID: 1948024018}
 --- !u!1 &5228413674354633564
 GameObject:
@@ -1785,6 +1786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Room_manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 666462803939298690, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
+        type: 3}
+      propertyPath: teleportation_active
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 666462803939298690, guid: 8a025ea2d4f19cc48b82744aeb4693a4,
         type: 3}

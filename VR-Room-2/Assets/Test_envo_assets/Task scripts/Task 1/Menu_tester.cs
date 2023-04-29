@@ -7,7 +7,7 @@ public class Menu_tester : MonoBehaviour
 {
     // Start is called before the first frame update
     string[] menu_items = { "Difficulty", "Main Menu Button", "Settings", "Extras", "Quit" };
-    string selected_item_name;
+    [SerializeField] string selected_item_name;
     GameObject selected_gameobject;
     [SerializeField] GameObject room_manager;
     bool completed = false;
@@ -17,7 +17,7 @@ public class Menu_tester : MonoBehaviour
         //set seed to Random   
         Random.InitState((int)System.DateTime.Now.Ticks);
         // choose one random int inbetween 0-5        
-        int random_int = Random.Range(0, 5);
+        int random_int = Random.Range(0, 4);
         selected_item_name = menu_items[random_int];
         selected_gameobject = GameObject.Find(selected_item_name);        
         TextMeshPro text = transform.Find("Instructions").GetComponent<TextMeshPro>();
