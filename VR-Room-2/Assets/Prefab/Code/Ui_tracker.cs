@@ -15,7 +15,7 @@ public class Ui_tracker : MonoBehaviour
 	private int cam_state ;
 
 	public void on_zoom_slider_value_changed (float value)
-	{
+	{		
 		mag_man_script.set_camera_fov(value);
 		set_zoom_slider_ui();
 	}
@@ -33,13 +33,15 @@ public class Ui_tracker : MonoBehaviour
 		
 		GameObject slider_parent = transform.Find("FOV Slider").gameObject;
 		GameObject handle_slide_area = slider_parent.transform.Find("Handle Slide Area").gameObject;
-		GameObject obj_text = handle_slide_area.transform.Find("Percentage_Display").gameObject;
+				
+		GameObject obj_text = transform.Find("FOV_Percentage_Display").gameObject;
 		TextMeshProUGUI text = obj_text.GetComponent<TextMeshProUGUI>();
 		float min = slider_parent.GetComponent<Slider>().minValue;
 		float max = slider_parent.GetComponent<Slider>().maxValue;
 
 		slider_parent.GetComponent<Slider>().value = current_fov;
 		current_fov = ((current_fov - min ) / (max - min)) * 100.0f;
+		
 		text.text = current_fov.ToString("F0") + "%";
 
 
