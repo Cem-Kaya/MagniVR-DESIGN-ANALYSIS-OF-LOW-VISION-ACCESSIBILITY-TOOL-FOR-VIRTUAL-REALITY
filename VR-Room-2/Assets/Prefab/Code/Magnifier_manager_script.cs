@@ -76,8 +76,8 @@ public class Magnifier_manager_script : MonoBehaviour
 			}
 			else if(left_joystick_2DAxis.y <= -0.5f)
 			{
-				//Debug.Log("zoom in");
-				if ((get_camera_fov() + adj_size) <= min)
+				//Debug.Log("zoom out");
+				if ((get_camera_fov() + adj_size) <= max)
 				{
 					set_camera_fov(get_camera_fov() + adj_size);
 				}
