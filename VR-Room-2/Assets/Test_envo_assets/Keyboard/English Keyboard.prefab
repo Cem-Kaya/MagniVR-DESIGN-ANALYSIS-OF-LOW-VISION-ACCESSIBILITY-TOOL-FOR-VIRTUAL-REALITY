@@ -34,7 +34,7 @@ RectTransform:
   - {fileID: 4337197298008932254}
   - {fileID: 733636622706555504}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -229,12 +229,18 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8941589372800987310}
     m_Modifications:
     - target: {fileID: 779778276812065867, guid: 164f46a43ac2b4e4d934eeaa362a168f,
         type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 779778276812065867, guid: 164f46a43ac2b4e4d934eeaa362a168f,
+        type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 779778276812065868, guid: 164f46a43ac2b4e4d934eeaa362a168f,
         type: 3}
@@ -348,6 +354,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 779778276812065865, guid: 164f46a43ac2b4e4d934eeaa362a168f, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 779778276812065869, guid: 164f46a43ac2b4e4d934eeaa362a168f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 679779290088685518}
   m_SourcePrefab: {fileID: 100100000, guid: 164f46a43ac2b4e4d934eeaa362a168f, type: 3}
 --- !u!224 &733636622706555504 stripped
 RectTransform:
@@ -381,6 +394,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -403,6 +417,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (')
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -515,6 +534,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923170661495236 stripped
 RectTransform:
@@ -527,6 +549,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -539,6 +562,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Keyboard_button_prefab (K) '
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -651,6 +679,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923170658359583 stripped
 RectTransform:
@@ -663,6 +694,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298008932254}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -786,6 +818,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923170732971758 stripped
 RectTransform:
@@ -798,6 +833,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -810,6 +846,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (U)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -922,6 +963,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923170726499681 stripped
 RectTransform:
@@ -934,6 +978,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -1058,6 +1103,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923170909780769 stripped
 RectTransform:
@@ -1070,6 +1118,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -1082,6 +1131,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (J)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -1194,6 +1248,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171004400011 stripped
 RectTransform:
@@ -1206,6 +1263,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -1228,6 +1286,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (|)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -1340,6 +1403,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171031003012 stripped
 RectTransform:
@@ -1352,6 +1418,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298008932254}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -1475,6 +1542,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171040310819 stripped
 RectTransform:
@@ -1487,6 +1557,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -1499,6 +1570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Keyboard_button_prefab (H) '
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -1611,6 +1687,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171035886475 stripped
 RectTransform:
@@ -1623,6 +1702,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -1747,6 +1827,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171154508651 stripped
 RectTransform:
@@ -1759,6 +1842,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -1883,6 +1967,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171169209201 stripped
 RectTransform:
@@ -1895,6 +1982,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -1907,6 +1995,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (E)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -2019,6 +2112,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171309057750 stripped
 RectTransform:
@@ -2031,6 +2127,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -2155,6 +2252,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171322385048 stripped
 RectTransform:
@@ -2167,6 +2267,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -2189,6 +2290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (:)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -2301,6 +2407,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171228387357 stripped
 RectTransform:
@@ -2313,6 +2422,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -2437,6 +2547,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171422439296 stripped
 RectTransform:
@@ -2449,6 +2562,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -2461,6 +2575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (A)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -2573,6 +2692,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171343110477 stripped
 RectTransform:
@@ -2585,6 +2707,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -2597,6 +2720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (R)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -2709,6 +2837,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171483623425 stripped
 RectTransform:
@@ -2721,6 +2852,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -2733,6 +2865,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Keyboard_button_prefab (I) '
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -2845,6 +2982,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171614649251 stripped
 RectTransform:
@@ -2857,6 +2997,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -2869,6 +3010,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Keyboard_button_prefab (Y) '
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -2981,6 +3127,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171834818531 stripped
 RectTransform:
@@ -2993,6 +3142,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -3117,6 +3267,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171833318327 stripped
 RectTransform:
@@ -3129,6 +3282,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -3253,6 +3407,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171797090192 stripped
 RectTransform:
@@ -3265,6 +3422,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -3389,6 +3547,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171969726728 stripped
 RectTransform:
@@ -3401,6 +3562,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -3423,6 +3585,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab ({)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -3535,6 +3702,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171885191116 stripped
 RectTransform:
@@ -3547,6 +3717,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -3559,6 +3730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (L)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -3671,6 +3847,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923171878661613 stripped
 RectTransform:
@@ -3683,6 +3862,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298008932254}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -3699,7 +3879,7 @@ PrefabInstance:
         type: 3}
       propertyPath: input_log
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8282438321239735710, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3811,6 +3991,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172115683393 stripped
 RectTransform:
@@ -3823,6 +4006,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -3835,6 +4019,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (O)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -3947,6 +4136,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172052242158 stripped
 RectTransform:
@@ -3959,6 +4151,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -3971,6 +4164,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (T)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -4083,6 +4281,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172219508158 stripped
 RectTransform:
@@ -4095,6 +4296,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -4219,6 +4421,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172225160999 stripped
 RectTransform:
@@ -4231,6 +4436,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -4245,140 +4451,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
-      propertyPath: input_log
+      propertyPath: my_text
       value: 
-      objectReference: {fileID: 779778276812065869, guid: 164f46a43ac2b4e4d934eeaa362a168f,
-        type: 3}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.4590001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
---- !u!224 &5340923172262030042 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
-    type: 3}
-  m_PrefabInstance: {fileID: 4337197299469796955}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4337197299534508901
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4337197298572824225}
-    m_Modifications:
-    - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_text
-      value: W
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873712046743725752, guid: a897435371d57d641aac9b328942c07c,
-        type: 3}
-      propertyPath: m_Name
-      value: Keyboard_button_prefab (W)
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -4491,6 +4566,154 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
+--- !u!224 &5340923172262030042 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4337197299469796955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4337197299534508901
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4337197298572824225}
+    m_Modifications:
+    - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_text
+      value: W
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873712046743725752, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_Name
+      value: Keyboard_button_prefab (W)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: input_log
+      value: 
+      objectReference: {fileID: 779778276812065869, guid: 164f46a43ac2b4e4d934eeaa362a168f,
+        type: 3}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.4590001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172196933604 stripped
 RectTransform:
@@ -4503,6 +4726,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -4515,6 +4739,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (D)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -4627,6 +4856,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172405642800 stripped
 RectTransform:
@@ -4639,6 +4871,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -4651,6 +4884,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (F)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -4763,6 +5001,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172317870465 stripped
 RectTransform:
@@ -4775,6 +5016,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -4802,6 +5044,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (Backwards)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -4851,12 +5098,12 @@ PrefabInstance:
     - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 162.9951
       objectReference: {fileID: 0}
     - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 37.3807
       objectReference: {fileID: 0}
     - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
@@ -4911,12 +5158,12 @@ PrefabInstance:
     - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.465
+      value: 2.4177
       objectReference: {fileID: 0}
     - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.297
+      value: -0.0079
       objectReference: {fileID: 0}
     - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
@@ -4939,6 +5186,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172484517675 stripped
 RectTransform:
@@ -4951,6 +5201,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197297978573567}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -4963,6 +5214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (G)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -5075,6 +5331,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172522412498 stripped
 RectTransform:
@@ -5087,6 +5346,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -5211,6 +5471,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172424094125 stripped
 RectTransform:
@@ -5223,6 +5486,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -5245,6 +5509,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (})
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -5357,6 +5626,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172419054490 stripped
 RectTransform:
@@ -5369,6 +5641,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298126334583}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -5493,6 +5766,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172463743677 stripped
 RectTransform:
@@ -5505,6 +5781,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -5517,6 +5794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_button_prefab (P)
       objectReference: {fileID: 0}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: input_log
@@ -5629,6 +5911,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &5340923172632560769 stripped
 RectTransform:
@@ -5641,6 +5926,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4337197298572824225}
     m_Modifications:
     - target: {fileID: 576376184426513905, guid: a897435371d57d641aac9b328942c07c,
@@ -5655,10 +5941,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
+      propertyPath: my_text
+      value: 
+      objectReference: {fileID: 733636622706555505}
+    - target: {fileID: 8024316693405694670, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
       propertyPath: input_log
       value: 
       objectReference: {fileID: 779778276812065869, guid: 164f46a43ac2b4e4d934eeaa362a168f,
         type: 3}
+    - target: {fileID: 8282438321239735710, guid: a897435371d57d641aac9b328942c07c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8515766644389899393, guid: a897435371d57d641aac9b328942c07c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5765,6 +6061,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a897435371d57d641aac9b328942c07c, type: 3}
 --- !u!224 &4337197299290039468 stripped
 RectTransform:

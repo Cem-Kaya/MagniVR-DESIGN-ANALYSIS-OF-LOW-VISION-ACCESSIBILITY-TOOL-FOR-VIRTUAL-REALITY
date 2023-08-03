@@ -8,14 +8,15 @@ public class button_click_script : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject input_log;
+    private GameObject input_log;
     //textmeshpro object 
-    public GameObject my_text;
+    private GameObject my_text;
     void Start()
     {
         //get the child Text (TMP) gameobject and equatei t to my_text
         //if my_text object is empty
-        
+        Transform parent = transform.parent.parent;
+        input_log = parent.Find("inputs_log").gameObject;
         my_text = gameObject.transform.Find("input").gameObject;
     }
 
@@ -27,9 +28,11 @@ public class button_click_script : MonoBehaviour
 
     public void update_log()
     {
+        Debug.Log("updating log");
         //get the text from the my_text object
         //add it to input_log's text
         input_log.GetComponent<TextMeshProUGUI>().text += my_text.GetComponent<TextMeshProUGUI>().text;
+        Debug.Log(input_log.GetComponent<TextMeshProUGUI>().text);
     }
     
     public void update_log_backspace()
