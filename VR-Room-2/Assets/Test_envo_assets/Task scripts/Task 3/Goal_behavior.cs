@@ -10,7 +10,7 @@ public class Goal_behavior : MonoBehaviour
     public (bool, string) object_2 = (false, "Clock_Digital");
     public (bool, string) object_3 = (false, "Hat_Witch_Blue");
 
-    public (bool, string) object_4 = (false, "Notebook_Pink");
+    public (bool, string) object_4 = (false, "Book_A_Blue"); //this was notebook pink if for some reason it breaks use that
     public (bool, string) object_5 = (false, "Speaker_Boombox");
     public (bool, string) object_6 = (false, "Tennis_Ball_Green");
     public bool task3_ended = false;
