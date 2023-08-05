@@ -11,6 +11,7 @@ public class button_click_script : MonoBehaviour
     private GameObject input_log;
     //textmeshpro object 
     private GameObject my_text;
+    [SerializeField] GameObject room_manager;
     void Start()
     {
         //get the child Text (TMP) gameobject and equatei t to my_text
@@ -28,12 +29,13 @@ public class button_click_script : MonoBehaviour
 
     public void update_log()
     {
-        Debug.Log("updating log");
+        //Debug.Log("updating log");
         //get the text from the my_text object
         //add it to input_log's text
         input_log.GetComponent<TextMeshProUGUI>().text += my_text.GetComponent<TextMeshProUGUI>().text;
         //Debug.Log(input_log.GetComponent<TextMeshProUGUI>().text);
-        if (input_log.GetComponent<TextMeshProUGUI>().text == "lets make vr more accessible")
+        if (input_log.GetComponent<TextMeshProUGUI>().text == "LETS MAKE VR MORE ACCESSIBLE")
+            room_manager.GetComponent<Room_manager_script>().set_teleportation_active(true);
         {
             Debug.Log("signal the next room stuff");
         }
@@ -48,6 +50,7 @@ public class button_click_script : MonoBehaviour
         {
             //get all chars except for the last char of input_log
             input_log.GetComponent<TextMeshProUGUI>().text = input_log.GetComponent<TextMeshProUGUI>().text.Substring(0, input_log.GetComponent<TextMeshProUGUI>().text.Length - 1);
+
         }
 
      

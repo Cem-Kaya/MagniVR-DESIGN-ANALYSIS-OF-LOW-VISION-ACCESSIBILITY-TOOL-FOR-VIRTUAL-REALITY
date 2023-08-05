@@ -6,6 +6,7 @@ public class Target_1_system_script : MonoBehaviour
 {
     // Start is called before the first frame update
     public int amount = 5;
+    [SerializeField] GameObject room_manager;
 
     void Start()
     {
@@ -22,7 +23,9 @@ public class Target_1_system_script : MonoBehaviour
         amount--;
         if (amount <= 0)
         {
-            Debug.Log("taget got shoot");
+            Debug.Log("ALL TARGETS HOT SHOT");
+            room_manager.GetComponent<Room_manager_script>().set_teleportation_active(true);
+
         }
     }
 }
