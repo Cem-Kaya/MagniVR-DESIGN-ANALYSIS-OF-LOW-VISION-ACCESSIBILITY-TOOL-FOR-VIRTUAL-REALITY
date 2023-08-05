@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Target_1_script : MonoBehaviour
 {
-    bool been_hit = false;
+    private bool been_hit = false;
+    private float speed = 1;
     // Start is called before the first frame update
+    private Target_1_system_script t1_sys;
     void Start()
     {
-        
+        t1_sys= transform.parent.parent.gameObject.GetComponent<Target_1_system_script>();
+        // multiply the speed by a random number inbetween 0.5 and 1.2
+        speed *= UnityEngine.Random.Range(0.5f, 1.2f);
+
     }
 
     // Update is called once per frame
@@ -22,7 +27,7 @@ public class Target_1_script : MonoBehaviour
         {
             if (transform.localPosition.x < 5.0f)
             {
-                transform.localPosition += new Vector3(0.1f, 0, 0);
+                transform.localPosition += new Vector3(0.1f, 0, 0)* speed;
             }
             else
             {
@@ -33,7 +38,7 @@ public class Target_1_script : MonoBehaviour
         {
             if (transform.localPosition.x > -5.0f)
             {
-                transform.localPosition -= new Vector3(0.1f, 0, 0);
+                transform.localPosition -= new Vector3(0.1f, 0, 0)* speed;
             }
             else
             {
@@ -49,7 +54,7 @@ public class Target_1_script : MonoBehaviour
         {
             been_hit = true;
             // get time 
-
+            t1_sys.targetr_shoot();
             Destroy(gameObject);
 
         }

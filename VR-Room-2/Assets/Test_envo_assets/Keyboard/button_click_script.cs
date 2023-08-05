@@ -32,7 +32,11 @@ public class button_click_script : MonoBehaviour
         //get the text from the my_text object
         //add it to input_log's text
         input_log.GetComponent<TextMeshProUGUI>().text += my_text.GetComponent<TextMeshProUGUI>().text;
-        Debug.Log(input_log.GetComponent<TextMeshProUGUI>().text);
+        //Debug.Log(input_log.GetComponent<TextMeshProUGUI>().text);
+        if (input_log.GetComponent<TextMeshProUGUI>().text == "lets make vr more accessible")
+        {
+            Debug.Log("signal the next room stuff");
+        }
     }
     
     public void update_log_backspace()
