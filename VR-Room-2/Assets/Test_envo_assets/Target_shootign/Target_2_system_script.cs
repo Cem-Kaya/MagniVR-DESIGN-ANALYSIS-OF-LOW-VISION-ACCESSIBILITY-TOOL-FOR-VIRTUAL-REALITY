@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target_1_system_script : MonoBehaviour
+public class Target_2_system_script : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int amount = 6;
+    public int amount = 5;
     [SerializeField] GameObject room_manager;
 
     void Start()
