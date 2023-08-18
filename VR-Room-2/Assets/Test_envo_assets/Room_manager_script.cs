@@ -24,8 +24,8 @@ public class Room_manager_script : MonoBehaviour
 
     void Start()
     {
-        File_manager fm = File_manager.get_singelton();
-        fm.WriteToFile("test_string");
+        //File_manager fm = File_manager.get_singelton();
+        //fm.WriteToFile("test_string");
 
 		audio_source = GetComponent<AudioSource>();
     }

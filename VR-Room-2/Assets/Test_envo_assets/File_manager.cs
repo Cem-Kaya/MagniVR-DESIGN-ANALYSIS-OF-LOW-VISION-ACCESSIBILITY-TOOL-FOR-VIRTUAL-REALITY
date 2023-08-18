@@ -7,34 +7,35 @@ public class File_manager{
 	private string fileName;
 	private File_manager ( ){
 		// name the file from the date and time 
-		fileName = System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".txt";
+		//fileName = System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".txt";
 
 	}
 	public static File_manager get_singelton()
 	{
-		if(file_manager_singolton == null)
-		{
-			file_manager_singolton = new File_manager();
-		}
-		return file_manager_singolton;
+		//if(file_manager_singolton == null)
+		//{
+		//	file_manager_singolton = new File_manager();
+		//}
+		//return file_manager_singolton;
+		return null;
 	}
 
 	private string GetFilePath()
 	{
-		string path;
+		string path = "";
 
-		if (Application.platform == RuntimePlatform.WindowsEditor ||Application.platform == RuntimePlatform.WindowsPlayer)
-		{
-			path = Path.Combine(Application.dataPath, fileName);
-		}
-		else if (Application.platform == RuntimePlatform.Android)
-		{
-			path = Path.Combine(Application.persistentDataPath, fileName);
-		}
-		else
-		{
-			throw new System.NotSupportedException("Platform not supported for file management.");
-		}
+		//if (Application.platform == RuntimePlatform.WindowsEditor ||Application.platform == RuntimePlatform.WindowsPlayer)
+		//{
+		//	path = Path.Combine(Application.dataPath, fileName);
+		//}
+		//else if (Application.platform == RuntimePlatform.Android)
+		//{
+		//	path = Path.Combine(Application.persistentDataPath, fileName);
+		//}
+		//else
+		//{
+		//	throw new System.NotSupportedException("Platform not supported for file management.");
+		//}
 
 		return path;
 	}
@@ -42,17 +43,17 @@ public class File_manager{
 
 	public void WriteToFile(string content)
 	{
-		string filePath = GetFilePath();
+		//string filePath = GetFilePath();
 
-		try
-		{
-			File.WriteAllText(filePath, content + "\n" );
-			//Debug.Log("File written successfully at: " + filePath);
-		}
-		catch (System.Exception e)
-		{
-			Debug.LogError("Error writing to file: " + e.Message);
-		}
+		//try
+		//{
+		//	File.WriteAllText(filePath, content + "\n" );
+		//	//Debug.Log("File written successfully at: " + filePath);
+		//}
+		//catch (System.Exception e)
+		//{
+		//	Debug.LogError("Error writing to file: " + e.Message);
+		//}
 	}
 
 
