@@ -40103,6 +40103,46 @@ PrefabInstance:
       propertyPath: room_manager
       value: 
       objectReference: {fileID: 685271757}
+    - target: {fileID: 3533192489901663505, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "\xDC"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533192489966862752, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "\u2190 Geri"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533192490251464987, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "\xC7"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533192490440229191, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "\u011E"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533192490603615946, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "Bo\u015Fluk"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533192490823878294, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "\u015E"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533192490851556371, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "\xD6"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533192491265457999, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "\u0130"
+      objectReference: {fileID: 0}
     - target: {fileID: 3762878020895840564, guid: 58a2f2cfb021c64429cfdef989adfda3,
         type: 3}
       propertyPath: m_text
@@ -40393,6 +40433,36 @@ PrefabInstance:
       propertyPath: room_manager
       value: 
       objectReference: {fileID: 685271757}
+    - target: {fileID: 6607576339040036319, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_Name
+      value: "Keyboard_button_prefab (\u015E)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607576339063750490, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_Name
+      value: "Keyboard_button_prefab (\xD6) "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607576339741875206, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_Name
+      value: "Keyboard_button_prefab (\u0130)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607576340533724760, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_Name
+      value: "Keyboard_button_prefab (\xDC)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607576340619547218, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_Name
+      value: "Keyboard_button_prefab (\xC7)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607576341068374542, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_Name
+      value: "Keyboard_button_prefab (\u011E)"
+      objectReference: {fileID: 0}
     - target: {fileID: 8561871832211904341, guid: 58a2f2cfb021c64429cfdef989adfda3,
         type: 3}
       propertyPath: m_SizeDelta.x
