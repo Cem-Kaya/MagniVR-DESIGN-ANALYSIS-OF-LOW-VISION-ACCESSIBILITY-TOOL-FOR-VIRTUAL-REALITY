@@ -7841,9 +7841,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 685271757}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 685271759}
+        m_TargetAssemblyTypeName: Room_manager_script, Assembly-CSharp
+        m_MethodName: set_teleportation_active
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14945,9 +14945,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 685271757}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 685271759}
+        m_TargetAssemblyTypeName: Room_manager_script, Assembly-CSharp
+        m_MethodName: set_teleportation_active
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16572,9 +16572,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 685271757}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 685271759}
+        m_TargetAssemblyTypeName: Room_manager_script, Assembly-CSharp
+        m_MethodName: set_teleportation_active
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37733,9 +37733,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 685271757}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 685271759}
+        m_TargetAssemblyTypeName: Room_manager_script, Assembly-CSharp
+        m_MethodName: set_teleportation_active
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38201,9 +38201,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 685271757}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 685271759}
+        m_TargetAssemblyTypeName: Room_manager_script, Assembly-CSharp
+        m_MethodName: set_teleportation_active
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43758,9 +43758,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 685271757}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 685271759}
+        m_TargetAssemblyTypeName: Room_manager_script, Assembly-CSharp
+        m_MethodName: set_teleportation_active
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
