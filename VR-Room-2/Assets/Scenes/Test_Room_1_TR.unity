@@ -40088,11 +40088,26 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5c29ba2b947cb904aafcbedd6ef2ad97, type: 3}
+    - target: {fileID: 1190101539734911796, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: Zorluk
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238625459113927841, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: Ekstralar
+      objectReference: {fileID: 0}
     - target: {fileID: 3424378310434444568, guid: 58a2f2cfb021c64429cfdef989adfda3,
         type: 3}
       propertyPath: room_manager
       value: 
       objectReference: {fileID: 685271757}
+    - target: {fileID: 3762878020895840564, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "T\u0131kla: "
+      objectReference: {fileID: 0}
     - target: {fileID: 4672990846475020496, guid: 58a2f2cfb021c64429cfdef989adfda3,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -40112,6 +40127,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228413674354633566, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "\xC7\u0131k\u0131\u015F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228413674431380502, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: Ayarlar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228413675458648138, guid: 58a2f2cfb021c64429cfdef989adfda3,
+        type: 3}
+      propertyPath: m_text
+      value: "Ana Men\xFC"
       objectReference: {fileID: 0}
     - target: {fileID: 5228413676014290817, guid: 58a2f2cfb021c64429cfdef989adfda3,
         type: 3}

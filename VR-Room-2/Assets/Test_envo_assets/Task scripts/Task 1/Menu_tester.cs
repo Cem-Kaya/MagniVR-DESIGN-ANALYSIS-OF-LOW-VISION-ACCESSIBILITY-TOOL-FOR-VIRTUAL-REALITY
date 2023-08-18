@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -21,7 +21,31 @@ public class Menu_tester : MonoBehaviour
         selected_item_name = menu_items[random_int];
         selected_gameobject = GameObject.Find(selected_item_name);        
         TextMeshPro text = transform.Find("Instructions").GetComponent<TextMeshPro>();
-        text.text += selected_item_name ;
+        if(selected_item_name == "Main Menu Button")
+        {
+            text.text += "Ana Menu";
+        }
+        else if(selected_item_name == "Difficulty")
+        {
+            text.text += "Zorluk";
+        }
+        else if (selected_item_name == "Settings")
+        {
+            text.text += "Ayarlar";
+        }
+        else if (selected_item_name == "Extras")
+        {
+            text.text += "Ekstralar";
+        }
+        else if (selected_item_name == "Quit")
+        {
+            text.text += "Cikis";
+        }
+        else
+        {
+            text.text += "ERROR";
+        }
+        //text.text += selected_item_name ;
 
 
     }
