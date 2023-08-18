@@ -17,7 +17,7 @@ public class Target_2_script : MonoBehaviour
     {
         t1_sys= transform.parent.parent.gameObject.GetComponent<Target_2_system_script>();
         // multiply the speed by a random number inbetween 0.5 and 1.2
-        speed *= UnityEngine.Random.Range(0.5f, 1.2f);
+        speed *= UnityEngine.Random.Range(0.4f, 1.0f);
 
         startingX = transform.localPosition.x;
 
