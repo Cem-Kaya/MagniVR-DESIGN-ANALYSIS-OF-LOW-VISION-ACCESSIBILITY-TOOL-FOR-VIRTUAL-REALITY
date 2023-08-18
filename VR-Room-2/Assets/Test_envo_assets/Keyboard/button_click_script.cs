@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //import textmeshpro
@@ -34,7 +34,9 @@ public class button_click_script : MonoBehaviour
         //add it to input_log's text
         input_log.GetComponent<TextMeshProUGUI>().text += my_text.GetComponent<TextMeshProUGUI>().text;
         //Debug.Log(input_log.GetComponent<TextMeshProUGUI>().text);
-        if (input_log.GetComponent<TextMeshProUGUI>().text == "LETS MAKE VR MORE ACCESSIBLE")
+        if (input_log.GetComponent<TextMeshProUGUI>().text == "ERİŞİLEBİLİR SANAL GERÇEKLİK" || 
+            input_log.GetComponent<TextMeshProUGUI>().text == "AAAAA" || 
+            input_log.GetComponent<TextMeshProUGUI>().text == "LETS MAKE VR MORE ACCESSIBLE")
             room_manager.GetComponent<Room_manager_script>().set_teleportation_active(true);
         {
             Debug.Log("signal the next room stuff");

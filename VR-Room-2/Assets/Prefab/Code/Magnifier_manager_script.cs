@@ -434,7 +434,7 @@ public class Magnifier_manager_script : MonoBehaviour
 		//multipyle camera pos with rotation 
 		//Debug.Log("cam pos: " + camera_pos);
 
-		obj.transform.position = camera_pos + camera_forward * 1f;
+		obj.transform.position = camera_pos + camera_forward * 0.5f;
 		obj.transform.rotation = camera_rot;
 	}
 	public void on_click_update_display_state()

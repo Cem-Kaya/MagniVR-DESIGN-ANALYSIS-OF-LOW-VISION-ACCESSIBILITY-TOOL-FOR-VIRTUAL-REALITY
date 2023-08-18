@@ -327,11 +327,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059090663754881158}
     m_Modifications:
+    - target: {fileID: 314372620899682923, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: "B\xFCy\xFCtme Seviyesi"
+      objectReference: {fileID: 0}
     - target: {fileID: 1001625429961550024, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4895905702033121259}
+    - target: {fileID: 1254904765417472912, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: Sol El
+      objectReference: {fileID: 0}
     - target: {fileID: 1284139093188289173, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -352,10 +362,20 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Ui_tracker, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1298629847998596824, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: "Kafa \xD6n\xFC"
+      objectReference: {fileID: 0}
     - target: {fileID: 1517830937217656965, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697787670920575336, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: Ekran Konumu
       objectReference: {fileID: 0}
     - target: {fileID: 1892694308753225430, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
@@ -497,25 +517,100 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3117021810002960662, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: "Sa\u011F El"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408179338202352492, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: "Sa\u011F El"
+      objectReference: {fileID: 0}
     - target: {fileID: 3515525916955496046, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611720964357212978, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: "A\xE7/Kapa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611720964357212978, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611720964357212978, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073363980934844565, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -83.3
       objectReference: {fileID: 0}
     - target: {fileID: 4221837079783898599, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5090013807025361970, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.043951225
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090013807025361970, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090013807025361970, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090013807025361970, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090013807025361970, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5411154583893227340, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4895905702033121259}
+    - target: {fileID: 6322555480224640292, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: Kamera Konumu
+      objectReference: {fileID: 0}
     - target: {fileID: 6494785888487514523, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_Name
       value: Canvas_magnifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584251126756841848, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: "B\xDCY\xDCTE\xC7 AYARLARI"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7154147772949202089, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242394457403308083, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: Ekran Boyutu
       objectReference: {fileID: 0}
     - target: {fileID: 7276711515608128990, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
@@ -527,10 +622,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7992418858875653854, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.099
+      objectReference: {fileID: 0}
     - target: {fileID: 8046359340084989676, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
       propertyPath: m_Name
       value: Percentage_Display
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282117223304410027, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: "Kafa \xD6n\xFC"
       objectReference: {fileID: 0}
     - target: {fileID: 8737444915739078893, guid: 1ef82316aaa610b4d862e00d57b0fac3,
         type: 3}
@@ -546,6 +651,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131560916001093122, guid: 1ef82316aaa610b4d862e00d57b0fac3,
+        type: 3}
+      propertyPath: m_text
+      value: Sol El
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

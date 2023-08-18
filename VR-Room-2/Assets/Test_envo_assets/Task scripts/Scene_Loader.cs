@@ -11,6 +11,6 @@ public class Scene_Loader : MonoBehaviour
     }
     public void Load_TR()
     {
-        SceneManager.LoadScene("Test_Room_1");
+        SceneManager.LoadScene("Test_Room_1_TR");
     }
 }
