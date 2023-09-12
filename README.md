@@ -2,6 +2,8 @@
 ## (The PDF file included in this repository and images provided in this readme do not reflect the current state of the project. Currently, the project is undergoing a complete re-implementation based on the feedback received.)
 # [Release](https://github.com/Cem-Kaya/VR-Magnifier/releases)
 
+[![Yoututbe video](https://img.youtube.com/vi/-q2E5zONnLM/0.jpg)](https://www.youtube.com/watch?v=-q2E5zONnLM)
+
 # Abstract
 The field of Virtual Reality is a rapidly growing and increasingly popular medium,
 however, the accessibility standards for individuals with low vision in VR have not yet been
