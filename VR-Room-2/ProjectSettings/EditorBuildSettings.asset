@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Cem_Room_0.unity
     guid: 63290030a68139a46806429f1497b451
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Test_Room_1.unity
     guid: 9c2b8e11e09ca344caaaba35cf7705b7
   - enabled: 1
